@@ -92,7 +92,7 @@ use Bitrix\Main\Page\Asset;
                     </form>
                     <ul class="mobile_nav">
                         <li>
-                            <a href="#">
+                            <a href="<?=SITE_DIR?>about/">
                                 О GKHAIR
                             </a>
                         </li>
@@ -268,12 +268,12 @@ use Bitrix\Main\Page\Asset;
                 <div class="header_center_nav">
                     <ul class="user_nav user_nav__left">
                         <li>
-                            <a href="#">
+                            <a href="<?=SITE_DIR?>about/">
                                 О GKHAIR
                             </a>
                         </li>
                         <li class="nav_item__dropdown">
-                            <a href="#">
+                            <a href="<?=SITE_DIR?>catalog/">
                                 Каталог
                                 <i class="fas fa-chevron-down"></i>
                             </a>
