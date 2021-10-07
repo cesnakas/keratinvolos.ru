@@ -10,39 +10,39 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
 
     <div class="right_side__buttons">
         <a href="https://api.whatsapp.com/send?phone=79690697755&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C%2C%20%D1%8F%20%D0%BF%D0%BE%20%D0%BF%D0%BE%D0%B2%D0%BE%D0%B4%D1%83..." target="_blank">
-            <img src="img/whatsupp.png" alt="">
+            <img src="<?=SITE_TEMPLATE_PATH?>/img/whatsupp.png" alt="">
         </a>
         <a href="#" data-toggle="modal" data-target="#callModal">
-            <img src="img/phone.png" alt="">
+            <img src="<?=SITE_TEMPLATE_PATH?>/img/phone.png" alt="">
         </a>
     </div>
 
     <footer>
         <div class="footer_top">
             <a href="#" class="logo">
-                <img src="img/logo.png" alt="">
+                <img src="<?=SITE_TEMPLATE_PATH?>/img/logo.png" alt="">
             </a>
             <div class="container">
                 <div class="contact_socials_block">
                     <div class="contact_block">
                         <p class="footer_title">
-                            <img src="img/footer_before.png" alt="">
+                            <img src="<?=SITE_TEMPLATE_PATH?>/img/footer_before.png" alt="">
                             КОНТАКТЫ
                         </p>
                         <p class="contact_item">
-                            <img src="img/footer_phone.png" alt="">
+                            <img src="<?=SITE_TEMPLATE_PATH?>/img/footer_phone.png" alt="">
                             <a href="tel:+78007074868">
                                 +7 (800) 707 48 68
                             </a>
                         </p>
                         <p class="contact_item">
-                            <img src="img/footer_phone.png" alt="">
+                            <img src="<?=SITE_TEMPLATE_PATH?>/img/footer_phone.png" alt="">
                             <a href="tel:+79269210355">
                                 +7 (926) 921 03 55
                             </a>
                         </p>
                         <p class="contact_item">
-                            <img src="img/footer_phone.png" alt="">
+                            <img src="<?=SITE_TEMPLATE_PATH?>/img/footer_phone.png" alt="">
                             <a href="tel:+79690697755">
                                 +7 (969) 069 77 55
                             </a>
@@ -55,17 +55,17 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                         <ul class="socials">
                             <li>
                                 <a href="#">
-                                    <img src="img/footer_inst.png" alt="">
+                                    <img src="<?=SITE_TEMPLATE_PATH?>/img/footer_inst.png" alt="">
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="img/footer_vk.png" alt="">
+                                    <img src="<?=SITE_TEMPLATE_PATH?>/img/footer_vk.png" alt="">
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="img/footer_fb.png" alt="">
+                                    <img src="<?=SITE_TEMPLATE_PATH?>/img/footer_fb.png" alt="">
                                 </a>
                             </li>
                         </ul>
@@ -73,7 +73,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                 </div>
                 <div class="footer_menu__block">
                     <p class="footer_title">
-                        <img src="img/footer_before.png" alt="">
+                        <img src="<?=SITE_TEMPLATE_PATH?>/img/footer_before.png" alt="">
                         МЕНЮ
                     </p>
                     <ul class="footer_menu">
@@ -116,7 +116,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                 </div>
                 <div class="footer_menu__block">
                     <p class="footer_title">
-                        <img src="img/footer_before.png" alt="">
+                        <img src="<?=SITE_TEMPLATE_PATH?>/img/footer_before.png" alt="">
                         МЕНЮ
                     </p>
                     <ul class="footer_menu">
@@ -159,7 +159,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                 </div>
                 <div class="footer_menu__block">
                     <p class="footer_title">
-                        <img src="img/footer_before.png" alt="">
+                        <img src="<?=SITE_TEMPLATE_PATH?>/img/footer_before.png" alt="">
                         КАТАЛОГ
                     </p>
                     <ul class="footer_menu">
@@ -193,7 +193,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                     Карта сайта
                 </a>
                 <a href="#" class="logo_jw" target="_blank">
-                    <img src="img/logo_jw.png" alt="">
+                    <img src="<?=SITE_TEMPLATE_PATH?>/img/logo_jw.png" alt="">
                 </a>
             </div>
         </div>
@@ -203,7 +203,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <a href="#" data-dismiss="modal" class="close">
-                    <img src="img/close.png" alt="">
+                    <img src="<?=SITE_TEMPLATE_PATH?>/img/close.png" alt="">
                 </a>
                 <form method="post">
                     <p class="modal_title">
@@ -236,7 +236,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                         <span class="checkmark"></span>
                     </label>
                     <div class="registered_block">
-                        <img src="img/user_login_icon.png" alt="">
+                        <img src="<?=SITE_TEMPLATE_PATH?>/img/user_login_icon.png" alt="">
                         <p>Нет аккаунта?</p>
                         <a href="#">ЗАРЕГИСТРИРОВАТЬСЯ</a>
                     </div>
@@ -249,13 +249,13 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <a href="#" data-dismiss="modal" class="close">
-                    <img src="img/close.png" alt="">
+                    <img src="<?=SITE_TEMPLATE_PATH?>/img/close.png" alt="">
                 </a>
                 <p class="modal_title">
                     КОРЗИНА
                 </p>
                 <div class="empty_cart_block">
-                    <img src="img/empty_cart_icon.png" alt="">
+                    <img src="<?=SITE_TEMPLATE_PATH?>/img/empty_cart_icon.png" alt="">
                     <p class="empty_info">
                         КОРЗИНА ПУСТА
                     </p>
@@ -271,7 +271,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <a href="#" data-dismiss="modal" class="close">
-                    <img src="img/close.png" alt="">
+                    <img src="<?=SITE_TEMPLATE_PATH?>/img/close.png" alt="">
                 </a>
                 <p class="modal_title">
                     КОРЗИНА
@@ -279,7 +279,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                 <div class="cart_item_wrapper">
                     <a href="#" class="cart_item">
                             <span class="cart_item__img">
-                                <img src="img/cart_img_1.png" alt="">
+                                <img src="<?=SITE_TEMPLATE_PATH?>/img/cart_img_1.png" alt="">
                             </span>
                         <span class="cart_item__right">
                                 <small class="cart_item__title">CBD Кондиционер GKhair: CBD Conditioner Vegan Line</small>
@@ -288,7 +288,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                     </a>
                     <a href="#" class="cart_item">
                             <span class="cart_item__img">
-                                <img src="img/cart_img_1.png" alt="">
+                                <img src="<?=SITE_TEMPLATE_PATH?>/img/cart_img_1.png" alt="">
                             </span>
                         <span class="cart_item__right">
                                 <small class="cart_item__title">CBD Кондиционер GKhair: CBD Conditioner Vegan Line</small>
@@ -297,7 +297,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                     </a>
                     <a href="#" class="cart_item">
                             <span class="cart_item__img">
-                                <img src="img/cart_img_1.png" alt="">
+                                <img src="<?=SITE_TEMPLATE_PATH?>/img/cart_img_1.png" alt="">
                             </span>
                         <span class="cart_item__right">
                                 <small class="cart_item__title">CBD Кондиционер GKhair: CBD Conditioner Vegan Line</small>
@@ -306,7 +306,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                     </a>
                     <a href="#" class="cart_item">
                             <span class="cart_item__img">
-                                <img src="img/cart_img_1.png" alt="">
+                                <img src="<?=SITE_TEMPLATE_PATH?>/img/cart_img_1.png" alt="">
                             </span>
                         <span class="cart_item__right">
                                 <small class="cart_item__title">CBD Кондиционер GKhair: CBD Conditioner Vegan Line</small>
@@ -315,7 +315,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                     </a>
                     <a href="#" class="cart_item">
                             <span class="cart_item__img">
-                                <img src="img/cart_img_1.png" alt="">
+                                <img src="<?=SITE_TEMPLATE_PATH?>/img/cart_img_1.png" alt="">
                             </span>
                         <span class="cart_item__right">
                                 <small class="cart_item__title">CBD Кондиционер GKhair: CBD Conditioner Vegan Line</small>
@@ -324,7 +324,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                     </a>
                     <a href="#" class="cart_item">
                             <span class="cart_item__img">
-                                <img src="img/cart_img_1.png" alt="">
+                                <img src="<?=SITE_TEMPLATE_PATH?>/img/cart_img_1.png" alt="">
                             </span>
                         <span class="cart_item__right">
                                 <small class="cart_item__title">CBD Кондиционер GKhair: CBD Conditioner Vegan Line</small>
@@ -333,7 +333,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                     </a>
                     <a href="#" class="cart_item">
                             <span class="cart_item__img">
-                                <img src="img/cart_img_1.png" alt="">
+                                <img src="<?=SITE_TEMPLATE_PATH?>/img/cart_img_1.png" alt="">
                             </span>
                         <span class="cart_item__right">
                                 <small class="cart_item__title">CBD Кондиционер GKhair: CBD Conditioner Vegan Line</small>
@@ -361,7 +361,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <a href="#" data-dismiss="modal" class="close">
-                    <img src="img/close_white.png" alt="">
+                    <img src="<?=SITE_TEMPLATE_PATH?>/img/close_white.png" alt="">
                 </a>
                 <p class="modal_click__title">
                     КУПИТЬ В 1 КЛИК
@@ -410,7 +410,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <a href="#" data-dismiss="modal" class="close">
-                    <img src="img/close_white.png" alt="">
+                    <img src="<?=SITE_TEMPLATE_PATH?>/img/close_white.png" alt="">
                 </a>
                 <p class="modal_click__title">
                     ЗАКАЗАТЬ ЗВОНОК
@@ -451,7 +451,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <a href="#" data-dismiss="modal" class="close">
-                    <img src="img/close_white.png" alt="">
+                    <img src="<?=SITE_TEMPLATE_PATH?>/img/close_white.png" alt="">
                 </a>
                 <p class="modal_click__title">
                     ЗАПРОСИТЬ ПРАЙС-ЛИСТ
@@ -508,7 +508,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <a href="#" data-dismiss="modal" class="close">
-                    <img src="img/close_white.png" alt="">
+                    <img src="<?=SITE_TEMPLATE_PATH?>/img/close_white.png" alt="">
                 </a>
                 <p class="modal_click__title">
                     ЗАДАТЬ ВОПРОС
@@ -566,11 +566,11 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <a href="#" data-dismiss="modal" class="close">
-                    <img src="img/close.png" alt="">
+                    <img src="<?=SITE_TEMPLATE_PATH?>/img/close.png" alt="">
                 </a>
                 <div class="modal_wrapper">
                     <div class="modal_left">
-                        <img src="img/product_1.jpg" alt="">
+                        <img src="<?=SITE_TEMPLATE_PATH?>/img/product_1.jpg" alt="">
                         <div class="hover_block">
                             <a href="#" class="btn btn_yellow">
                                 Подробнее
@@ -583,29 +583,29 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                                 CBD Кондиционер GKhair: CBD Conditioner Vegan Line
                             </p>
                             <a href="#" class="add_favorite">
-                                <img src="img/favorite_icon.png" alt="">
+                                <img src="<?=SITE_TEMPLATE_PATH?>/img/favorite_icon.png" alt="">
                             </a>
                         </div>
                         <div class="product_status_block">
                             <p class="product_status">
-                                <img src="img/accept.png" alt="">
+                                <img src="<?=SITE_TEMPLATE_PATH?>/img/accept.png" alt="">
                                 В наличии
                             </p>
                             <div class="stars_block">
                                 <a href="#" class="star current_star">
-                                    <img src="img/star.png" alt="">
+                                    <img src="<?=SITE_TEMPLATE_PATH?>/img/star.png" alt="">
                                 </a>
                                 <a href="#" class="star">
-                                    <img src="img/star.png" alt="">
+                                    <img src="<?=SITE_TEMPLATE_PATH?>/img/star.png" alt="">
                                 </a>
                                 <a href="#" class="star">
-                                    <img src="img/star.png" alt="">
+                                    <img src="<?=SITE_TEMPLATE_PATH?>/img/star.png" alt="">
                                 </a>
                                 <a href="#" class="star">
-                                    <img src="img/star.png" alt="">
+                                    <img src="<?=SITE_TEMPLATE_PATH?>/img/star.png" alt="">
                                 </a>
                                 <a href="#" class="star">
-                                    <img src="img/star.png" alt="">
+                                    <img src="<?=SITE_TEMPLATE_PATH?>/img/star.png" alt="">
                                 </a>
                             </div>
                         </div>
@@ -691,7 +691,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <a href="#" data-dismiss="modal" class="close">
-                    <img src="img/close_white.png" alt="">
+                    <img src="<?=SITE_TEMPLATE_PATH?>/img/close_white.png" alt="">
                 </a>
                 <p class="modal_click__title">
                     СТАТЬ ПАРТНЕРОМ
@@ -749,7 +749,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <a href="#" data-dismiss="modal" class="close">
-                    <img src="img/close_white.png" alt="">
+                    <img src="<?=SITE_TEMPLATE_PATH?>/img/close_white.png" alt="">
                 </a>
                 <p class="modal_click__title">
                     БЛАГОДАРИМ ЗА ДОВЕРИЕ
@@ -760,17 +760,17 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                 <ul class="modal_socials">
                     <li>
                         <a href="#">
-                            <img src="img/inst_fiol.png" alt="">
+                            <img src="<?=SITE_TEMPLATE_PATH?>/img/inst_fiol.png" alt="">
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="img/vk_fiol.png" alt="">
+                            <img src="<?=SITE_TEMPLATE_PATH?>/img/vk_fiol.png" alt="">
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="img/fb_fiol.png" alt="">
+                            <img src="<?=SITE_TEMPLATE_PATH?>/img/fb_fiol.png" alt="">
                         </a>
                     </li>
                 </ul>
@@ -782,7 +782,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <a href="#" data-dismiss="modal" class="close">
-                    <img src="img/close_white.png" alt="">
+                    <img src="<?=SITE_TEMPLATE_PATH?>/img/close_white.png" alt="">
                 </a>
                 <p class="modal_click__title">
                     ЗАПРОСИТЬ ПРАЙС-ЛИСТ
