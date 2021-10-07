@@ -429,3 +429,5 @@ use Bitrix\Main\Page\Asset;
 
     </header>
     <!-- END HEADER -->
+
+    <section class="content">

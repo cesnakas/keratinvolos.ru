@@ -2,6 +2,8 @@
 if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
 ?>
 
+    </section>
+
     <div id="scroll">
         <a href="#main">
             <i class="fas fa-chevron-up"></i>
