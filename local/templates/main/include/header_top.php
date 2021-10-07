@@ -1,0 +1,1 @@
+<span>СКИДКА 20%</span> НА ВСЕ ТОВАРЫ С ПРОМОКОДОМ - <small>LOVEGKHAIR</small>

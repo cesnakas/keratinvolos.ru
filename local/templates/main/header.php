@@ -41,7 +41,13 @@ use Bitrix\Main\Page\Asset;
         <div class="header_top">
             <div class="container">
                 <p class="promocode_line">
-                    <span>СКИДКА 20%</span> НА ВСЕ ТОВАРЫ С ПРОМОКОДОМ -  <small>LOVEGKHAIR</small>
+					<?php
+					$APPLICATION->IncludeComponent("bitrix:main.include", "",
+						[
+							"AREA_FILE_SHOW" => "file",
+							"PATH" => SITE_TEMPLATE_PATH."/include/header_top.php"
+						]
+					);?>
                 </p>
             </div>
         </div>
