@@ -286,19 +286,13 @@ use Bitrix\Main\Page\Asset;
                     </a>
                     <ul class="user_nav user_nav__right">
                         <li>
-                            <a href="#">
-                                САЛОНАМ
-                            </a>
+                            <a href="<?=SITE_DIR?>salonam/">САЛОНАМ</a>
                         </li>
                         <li>
-                            <a href="#">
-                                ДИЛЛЕРАМ
-                            </a>
+                            <a href="<?=SITE_DIR?>dealers/">ДИЛЛЕРАМ</a>
                         </li>
                         <li>
-                            <a href="#">
-                                КОНТАКТЫ
-                            </a>
+                            <a href="<?=SITE_DIR?>contacts/">КОНТАКТЫ</a>
                         </li>
                     </ul>
                 </div>
@@ -344,3 +338,32 @@ use Bitrix\Main\Page\Asset;
     <!-- END HEADER -->
 
     <section class="content">
+
+    <?php
+    if (
+        !CSite::InDir(SITE_DIR.'index.php') &&
+        !CSite::InDir(SITE_DIR.'catalog/')
+    ):
+    ?>
+        <div class="section section_page_title">
+            <div class="container">
+                <p class="page_title">
+                    <?php
+                    $APPLICATION->ShowTitle(false);
+                    ?>
+                </p>
+                <div class="breadcrumbs">
+					<?php
+                    $APPLICATION->IncludeComponent("bitrix:breadcrumb", "",
+                        [
+							"SITE_ID" => "s1",
+							"START_FROM" => "0",
+							"PATH" => ""
+						]
+					);?>
+                </div>
+            </div>
+        </div>
+    <?php
+    endif;
+    ?>

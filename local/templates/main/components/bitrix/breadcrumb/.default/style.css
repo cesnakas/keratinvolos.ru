@@ -1,0 +1,4 @@
+.breadcrumbs ul a,
+.breadcrumbs ul span {
+    text-transform: uppercase;
+}

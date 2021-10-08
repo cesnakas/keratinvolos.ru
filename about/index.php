@@ -1,9 +1,10 @@
 <?php
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("О компании");
+
 ?>
 
-    <div class="section section_page_title">
+    <!--<div class="section section_page_title">
         <div class="container">
             <p class="page_title">
                 О GKHAIR
@@ -23,7 +24,7 @@ $APPLICATION->SetTitle("О компании");
                 </ul>
             </div>
         </div>
-    </div>
+    </div>-->
 
     <div class="section section_about__page">
         <div class="container">
