@@ -3,7 +3,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("Статьи");
 ?>
 
-    <div class="section section_page_title">
+    <!--<div class="section section_page_title">
         <div class="container">
             <p class="page_title">
                 СТАТЬИ
@@ -23,7 +23,7 @@ $APPLICATION->SetTitle("Статьи");
                 </ul>
             </div>
         </div>
-    </div>
+    </div>-->
 
     <div class="section section_articles">
         <div class="container">
