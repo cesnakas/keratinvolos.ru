@@ -59,22 +59,26 @@ use Bitrix\Main\Page\Asset;
                 </p>
                 <div class="header_middle__contacts">
                     <p class="contact">
-                        <span>
-                            ОПТ:
-                        </span>
+                        <span>ОПТ:</span>
                         <img src="<?=SITE_TEMPLATE_PATH?>/img/phone_icon__gold.png" alt="">
-                        <a href="tel:+78007074868">
-                            +7 (800) 707 48 68
-                        </a>
+						<?php
+						$APPLICATION->IncludeComponent("bitrix:main.include", "",
+							[
+								"AREA_FILE_SHOW" => "file",
+								"PATH" => SITE_TEMPLATE_PATH."/include/phone_opt.php"
+							]
+						);?>
                     </p>
                     <p class="contact">
-                        <span>
-                            ИНТЕРНЕТ МАГАЗИН:
-                        </span>
+                        <span>ИНТЕРНЕТ МАГАЗИН:</span>
                         <img src="<?=SITE_TEMPLATE_PATH?>/img/phone_icon__gold.png" alt="">
-                        <a href="tel:+79690697755">
-                            +7 (969) 069 77 55
-                        </a>
+						<?php
+						$APPLICATION->IncludeComponent("bitrix:main.include", "",
+							[
+								"AREA_FILE_SHOW" => "file",
+								"PATH" => SITE_TEMPLATE_PATH."/include/phone_shop.php"
+							]
+						);?>
                     </p>
                 </div>
             </div>

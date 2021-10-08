@@ -21,7 +21,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
 
     <footer>
         <div class="footer_top">
-            <a href="#" class="logo">
+            <a href="<?=SITE_DIR?>" class="logo">
                 <img src="<?=SITE_TEMPLATE_PATH?>/img/logo.png" alt="">
             </a>
             <div class="container">
@@ -33,27 +33,31 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                         </p>
                         <p class="contact_item">
                             <img src="<?=SITE_TEMPLATE_PATH?>/img/footer_phone.png" alt="">
-                            <a href="tel:+78007074868">
-                                +7 (800) 707 48 68
-                            </a>
+							<?php
+							$APPLICATION->IncludeComponent("bitrix:main.include", "",
+								[
+									"AREA_FILE_SHOW" => "file",
+									"PATH" => SITE_TEMPLATE_PATH."/include/phone_opt.php"
+								]
+							);?>
                         </p>
                         <p class="contact_item">
                             <img src="<?=SITE_TEMPLATE_PATH?>/img/footer_phone.png" alt="">
-                            <a href="tel:+79269210355">
-                                +7 (926) 921 03 55
-                            </a>
+                            <a href="tel:+79269210355">+7 (926) 921 03 55</a>
                         </p>
                         <p class="contact_item">
                             <img src="<?=SITE_TEMPLATE_PATH?>/img/footer_phone.png" alt="">
-                            <a href="tel:+79690697755">
-                                +7 (969) 069 77 55
-                            </a>
+							<?php
+							$APPLICATION->IncludeComponent("bitrix:main.include", "",
+								[
+									"AREA_FILE_SHOW" => "file",
+									"PATH" => SITE_TEMPLATE_PATH."/include/phone_shop.php"
+								]
+							);?>
                         </p>
                     </div>
                     <div class="social_block">
-                        <p class="social_name">
-                            МЫ В СОЦИАЛЬНЫХ СЕТЯХ:
-                        </p>
+                        <p class="social_name">МЫ В СОЦИАЛЬНЫХ СЕТЯХ:</p>
                         <ul class="socials">
                             <li>
                                 <a href="#">
@@ -80,39 +84,25 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                     </p>
                     <ul class="footer_menu">
                         <li>
-                            <a href="#">
-                                О GKhair
-                            </a>
+                            <a href="<?=SITE_DIR?>about/">О GKhair</a>
                         </li>
                         <li>
-                            <a href="#">
-                                Доставка и оплата
-                            </a>
+                            <a href="<?=SITE_DIR?>delivery/">Доставка и оплата</a>
                         </li>
                         <li>
-                            <a href="#">
-                                Новости
-                            </a>
+                            <a href="<?=SITE_DIR?>news/">Новости</a>
                         </li>
                         <li>
-                            <a href="#">
-                                Статьи
-                            </a>
+                            <a href="<?=SITE_DIR?>articles/">Статьи</a>
                         </li>
                         <li>
-                            <a href="#">
-                                Обучение
-                            </a>
+                            <a href="<?=SITE_DIR?>school/">Обучение</a>
                         </li>
                         <li>
-                            <a href="#">
-                                Галерии
-                            </a>
+                            <a href="<?=SITE_DIR?>gallery/">Галерии</a>
                         </li>
                         <li>
-                            <a href="#">
-                                Сертификаты
-                            </a>
+                            <a href="<?=SITE_DIR?>certificates/">Сертификаты</a>
                         </li>
                     </ul>
                 </div>
@@ -123,39 +113,25 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                     </p>
                     <ul class="footer_menu">
                         <li>
-                            <a href="#">
-                                Вопросы и ответы
-                            </a>
+                            <a href="#">Вопросы и ответы</a>
                         </li>
                         <li>
-                            <a href="#">
-                                Сотрудничество
-                            </a>
+                            <a href="#">Сотрудничество</a>
                         </li>
                         <li>
-                            <a href="#">
-                                Салонам
-                            </a>
+                            <a href="#">Салонам</a>
                         </li>
                         <li>
-                            <a href="#">
-                                Диллерам
-                            </a>
+                            <a href="#">Диллерам</a>
                         </li>
                         <li>
-                            <a href="#">
-                                Возврат и Обмен
-                            </a>
+                            <a href="#">Возврат и Обмен</a>
                         </li>
                         <li>
-                            <a href="#">
-                                Политика конфидициальности
-                            </a>
+                            <a href="#">Политика конфиденциальности</a>
                         </li>
                         <li>
-                            <a href="#">
-                                Контаткы
-                            </a>
+                            <a href="#">Контакты</a>
                         </li>
                     </ul>
                 </div>
