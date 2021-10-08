@@ -272,108 +272,11 @@ use Bitrix\Main\Page\Asset;
                     </li>
                 </ul>
                 <div class="header_center_nav">
-                    <ul class="user_nav user_nav__left">
-                        <li>
-                            <a href="<?=SITE_DIR?>about/">
-                                О GKHAIR
-                            </a>
-                        </li>
-                        <li class="nav_item__dropdown">
-                            <a href="<?=SITE_DIR?>catalog/">
-                                Каталог
-                                <i class="fas fa-chevron-down"></i>
-                            </a>
-                            <div class="catalog_submenu">
-                                <a href="#">
-                                    Домашний уход с кератином
-                                </a>
-                                <a href="#">
-                                    Окрашивание волос
-                                </a>
-                                <a href="#">
-                                    Инструменты и аксессуары
-                                </a>
-                                <a href="#">
-                                    Кератиновое выпрямление и восстановление волос
-                                </a>
-                            </div>
-                        </li>
-                        <li class="nav_item__dropdown">
-                            <a href="#">
-                                ИНФОРМАЦИЯ
-                                <i class="fas fa-chevron-down"></i>
-                            </a>
-                            <div class="catalog_submenu">
-                                <div class="catalog_submenu__left">
-                                    <a href="#">
-                                        О GKhair
-                                    </a>
-                                    <a href="#">
-                                        Доставка и оплата
-                                    </a>
-                                    <a href="#">
-                                        Новости
-                                    </a>
-                                    <div class="nav_item__dropdown__inner">
-                                        <a href="#">
-                                            Статьи
-                                            <i class="fas fa-chevron-down"></i>
-                                        </a>
-                                        <div class="catalog_submenu__inner">
-                                            <a href="#">
-                                                Семинар мастер-класс GKhair
-                                            </a>
-                                            <a href="#">
-                                                Кератиновое выпрямление волос
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="nav_item__dropdown__inner">
-                                        <a href="#">
-                                            Обучение
-                                            <i class="fas fa-chevron-down"></i>
-                                        </a>
-                                        <div class="catalog_submenu__inner">
-                                            <a href="#">
-                                                Расписание семинаров GKhair
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="nav_item__dropdown__inner">
-                                        <a href="#">
-                                            Галерии
-                                            <i class="fas fa-chevron-down"></i>
-                                        </a>
-                                        <div class="catalog_submenu__inner">
-                                            <a href="#">
-                                                Видеоролики
-                                            </a>
-                                            <a href="#">
-                                                Фотографии
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <a href="#">
-                                        Сертификаты
-                                    </a>
-                                </div>
-                                <div class="catalog_submenu__right">
-                                    <a href="#">
-                                        Вопросы и ответы
-                                    </a>
-                                    <a href="#">
-                                        Сотрудничество
-                                    </a>
-                                    <a href="#">
-                                        Возврат и Обмен
-                                    </a>
-                                    <a href="#">
-                                        Политика конфидициальности
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                    <?php
+                    $APPLICATION->IncludeComponent(
+                        "bitrix:menu",
+                        "nav_global-left"
+                    );?>
                     <a href="<?=SITE_DIR?>" class="logo">
                         <img src="<?=SITE_TEMPLATE_PATH?>/img/logo.png" alt="">
                     </a>
