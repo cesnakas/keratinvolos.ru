@@ -108,7 +108,7 @@ use Bitrix\Main\Page\Asset;
                     </form>
 
                     <?php
-                    $APPLICATION->IncludeComponent("bitrix:menu", "nav_mobile",
+                    $APPLICATION->IncludeComponent("bitrix:menu", "nav_header-mobile",
                         [
 
                         ]
@@ -212,7 +212,14 @@ use Bitrix\Main\Page\Asset;
                     <?php
                     $APPLICATION->IncludeComponent(
                         "bitrix:menu",
-                        "nav_global-left"
+                        "nav_header-left",
+                        [
+							"ROOT_MENU_TYPE" => "header-left",
+							"MAX_LEVEL" => "2",
+							"CHILD_MENU_TYPE" => "header-left",
+							"MENU_CACHE_TYPE" => "Y",
+							"MENU_CACHE_TIME" => "3600",
+						]
                     );?>
                     <a href="<?=SITE_DIR?>" class="logo">
                         <img src="<?=SITE_TEMPLATE_PATH?>/img/logo.png" alt="">

@@ -100,29 +100,21 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                         <img src="<?=SITE_TEMPLATE_PATH?>/img/footer_before.png" alt="">
                         МЕНЮ
                     </p>
-                    <ul class="footer_menu">
-                        <li>
-                            <a href="<?=SITE_DIR?>about/">О GKhair</a>
-                        </li>
-                        <li>
-                            <a href="<?=SITE_DIR?>delivery/">Доставка и оплата</a>
-                        </li>
-                        <li>
-                            <a href="<?=SITE_DIR?>news/">Новости</a>
-                        </li>
-                        <li>
-                            <a href="<?=SITE_DIR?>articles/">Статьи</a>
-                        </li>
-                        <li>
-                            <a href="<?=SITE_DIR?>school/">Обучение</a>
-                        </li>
-                        <li>
-                            <a href="<?=SITE_DIR?>gallery/">Галерии</a>
-                        </li>
-                        <li>
-                            <a href="<?=SITE_DIR?>certificates/">Сертификаты</a>
-                        </li>
-                    </ul>
+                    <?php
+                    $APPLICATION->IncludeComponent("bitrix:menu", "nav_footer-menu",
+                        [
+							"ROOT_MENU_TYPE" => "footer-1",
+							"MAX_LEVEL" => "1",
+							"CHILD_MENU_TYPE" => "footer-1",
+							"USE_EXT" => "N",
+							"DELAY" => "N",
+							"ALLOW_MULTI_SELECT" => "N",
+							"MENU_CACHE_TYPE" => "A",
+							"MENU_CACHE_TIME" => "3600",
+							"MENU_CACHE_USE_GROUPS" => "Y",
+							"MENU_CACHE_GET_VARS" => ""
+						]
+                    );?>
                 </div>
                 <div class="footer_menu__block">
                     <p class="footer_title">
