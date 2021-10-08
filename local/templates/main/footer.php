@@ -113,25 +113,25 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                     </p>
                     <ul class="footer_menu">
                         <li>
-                            <a href="#">Вопросы и ответы</a>
+                            <a href="<?=SITE_DIR?>faq/">Вопросы и ответы</a>
                         </li>
                         <li>
-                            <a href="#">Сотрудничество</a>
+                            <a href="<?=SITE_DIR?>cooperation/">Сотрудничество</a>
                         </li>
                         <li>
-                            <a href="#">Салонам</a>
+                            <a href="<?=SITE_DIR?>salonam/">Салонам</a>
                         </li>
                         <li>
-                            <a href="#">Диллерам</a>
+                            <a href="<?=SITE_DIR?>dealers/">Диллерам</a>
                         </li>
                         <li>
-                            <a href="#">Возврат и Обмен</a>
+                            <a href="<?=SITE_DIR?>refund/">Возврат и Обмен</a>
                         </li>
                         <li>
-                            <a href="#">Политика конфиденциальности</a>
+                            <a href="<?=SITE_DIR?>privacy/">Политика конфиденциальности</a>
                         </li>
                         <li>
-                            <a href="#">Контакты</a>
+                            <a href="<?=SITE_DIR?>contacts/">Контакты</a>
                         </li>
                     </ul>
                 </div>
@@ -142,24 +142,16 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                     </p>
                     <ul class="footer_menu">
                         <li>
-                            <a href="#">
-                                Домашний уход
-                            </a>
+                            <a href="#">Домашний уход</a>
                         </li>
                         <li>
-                            <a href="#">
-                                Приборы и аксессуары для волос
-                            </a>
+                            <a href="#">Приборы и аксессуары для волос</a>
                         </li>
                         <li>
-                            <a href="#">
-                                Выпрямление и восстановление
-                            </a>
+                            <a href="#">Выпрямление и восстановление</a>
                         </li>
                         <li>
-                            <a href="#">
-                                Системы окрашивания
-                            </a>
+                            <a href="#">Системы окрашивания</a>
                         </li>
                     </ul>
                 </div>
