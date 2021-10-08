@@ -116,35 +116,17 @@ use Bitrix\Main\Page\Asset;
 
                     <ul class="social">
                         <li>
-                            <a href="<?php
-								$APPLICATION->IncludeComponent("bitrix:main.include", "",
-									[
-										"AREA_FILE_SHOW" => "file",
-										"PATH" => SITE_TEMPLATE_PATH."/include/instagram.php"
-									]
-								);?>" target="_blank">
+                            <a href="https://www.instagram.com/gkhair_russia/" target="_blank">
                                 <img src="<?=SITE_TEMPLATE_PATH?>/img/inst_fiol.png" alt="">
                             </a>
                         </li>
                         <li>
-                            <a href="<?php
-							$APPLICATION->IncludeComponent("bitrix:main.include", "",
-								[
-									"AREA_FILE_SHOW" => "file",
-									"PATH" => SITE_TEMPLATE_PATH."/include/vk.php"
-								]
-							);?>" target="_blank">
+                            <a href="https://vk.com/gkhairrussia" target="_blank">
                                 <img src="<?=SITE_TEMPLATE_PATH?>/img/vk_fiol.png" alt="">
                             </a>
                         </li>
                         <li>
-                            <a href="<?php
-							$APPLICATION->IncludeComponent("bitrix:main.include", "",
-								[
-									"AREA_FILE_SHOW" => "file",
-									"PATH" => SITE_TEMPLATE_PATH."/include/facebook.php"
-								]
-							);?>" target="_blank">
+                            <a href="https://www.facebook.com/GkhairRussiaMoscow/" target="_blank">
                                 <img src="<?=SITE_TEMPLATE_PATH?>/img/fb_fiol.png" alt="">
                             </a>
                         </li>
@@ -175,35 +157,17 @@ use Bitrix\Main\Page\Asset;
 
                 <ul class="social">
                     <li>
-                        <a href="<?php
-						$APPLICATION->IncludeComponent("bitrix:main.include", "",
-							[
-								"AREA_FILE_SHOW" => "file",
-								"PATH" => SITE_TEMPLATE_PATH."/include/instagram.php"
-							]
-						);?>" target="_blank">
+                        <a href="https://www.instagram.com/gkhair_russia/" target="_blank">
                             <img src="<?=SITE_TEMPLATE_PATH?>/img/inst_fiol.png" alt="">
                         </a>
                     </li>
                     <li>
-                        <a href="<?php
-						$APPLICATION->IncludeComponent("bitrix:main.include", "",
-							[
-								"AREA_FILE_SHOW" => "file",
-								"PATH" => SITE_TEMPLATE_PATH."/include/vk.php"
-							]
-						);?>" target="_blank">
+                        <a href="https://vk.com/gkhairrussia" target="_blank">
                             <img src="<?=SITE_TEMPLATE_PATH?>/img/vk_fiol.png" alt="">
                         </a>
                     </li>
                     <li>
-                        <a href="<?php
-						$APPLICATION->IncludeComponent("bitrix:main.include", "",
-							[
-								"AREA_FILE_SHOW" => "file",
-								"PATH" => SITE_TEMPLATE_PATH."/include/facebook.php"
-							]
-						);?>" target="_blank">
+                        <a href="https://www.facebook.com/GkhairRussiaMoscow/" target="_blank">
                             <img src="<?=SITE_TEMPLATE_PATH?>/img/fb_fiol.png" alt="">
                         </a>
                     </li>

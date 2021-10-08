@@ -60,35 +60,17 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                         <p class="social_name">МЫ В СОЦИАЛЬНЫХ СЕТЯХ:</p>
                         <ul class="socials">
                             <li>
-                                <a href="<?php
-								$APPLICATION->IncludeComponent("bitrix:main.include", "",
-									[
-										"AREA_FILE_SHOW" => "file",
-										"PATH" => SITE_TEMPLATE_PATH."/include/instagram.php"
-									]
-								);?>" target="_blank">
+                                <a href="https://www.instagram.com/gkhair_russia/" target="_blank">
                                     <img src="<?=SITE_TEMPLATE_PATH?>/img/footer_inst.png" alt="">
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php
-								$APPLICATION->IncludeComponent("bitrix:main.include", "",
-									[
-										"AREA_FILE_SHOW" => "file",
-										"PATH" => SITE_TEMPLATE_PATH."/include/vk.php"
-									]
-								);?>" target="_blank">
+                                <a href="https://vk.com/gkhairrussia" target="_blank">
                                     <img src="<?=SITE_TEMPLATE_PATH?>/img/footer_vk.png" alt="">
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php
-								$APPLICATION->IncludeComponent("bitrix:main.include", "",
-									[
-										"AREA_FILE_SHOW" => "file",
-										"PATH" => SITE_TEMPLATE_PATH."/include/facebook.php"
-									]
-								);?>" target="_blank">
+                                <a href="https://www.facebook.com/GkhairRussiaMoscow/" target="_blank">
                                     <img src="<?=SITE_TEMPLATE_PATH?>/img/footer_fb.png" alt="">
                                 </a>
                             </li>
@@ -101,7 +83,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                         МЕНЮ
                     </p>
                     <?php
-                    $APPLICATION->IncludeComponent("bitrix:menu", "nav_footer-menu",
+                    $APPLICATION->IncludeComponent("bitrix:menu", "footer_menu",
                         [
 							"ROOT_MENU_TYPE" => "footer-1",
 							"MAX_LEVEL" => "1",
@@ -121,49 +103,42 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                         <img src="<?=SITE_TEMPLATE_PATH?>/img/footer_before.png" alt="">
                         МЕНЮ
                     </p>
-                    <ul class="footer_menu">
-                        <li>
-                            <a href="<?=SITE_DIR?>faq/">Вопросы и ответы</a>
-                        </li>
-                        <li>
-                            <a href="<?=SITE_DIR?>cooperation/">Сотрудничество</a>
-                        </li>
-                        <li>
-                            <a href="<?=SITE_DIR?>salonam/">Салонам</a>
-                        </li>
-                        <li>
-                            <a href="<?=SITE_DIR?>dealers/">Диллерам</a>
-                        </li>
-                        <li>
-                            <a href="<?=SITE_DIR?>refund/">Возврат и Обмен</a>
-                        </li>
-                        <li>
-                            <a href="<?=SITE_DIR?>privacy/">Политика конфиденциальности</a>
-                        </li>
-                        <li>
-                            <a href="<?=SITE_DIR?>contacts/">Контакты</a>
-                        </li>
-                    </ul>
+					<?php
+					$APPLICATION->IncludeComponent("bitrix:menu", "footer_menu",
+						[
+							"ROOT_MENU_TYPE" => "footer-2",
+							"MAX_LEVEL" => "1",
+							"CHILD_MENU_TYPE" => "footer-2",
+							"USE_EXT" => "N",
+							"DELAY" => "N",
+							"ALLOW_MULTI_SELECT" => "N",
+							"MENU_CACHE_TYPE" => "A",
+							"MENU_CACHE_TIME" => "3600",
+							"MENU_CACHE_USE_GROUPS" => "Y",
+							"MENU_CACHE_GET_VARS" => ""
+						]
+					);?>
                 </div>
                 <div class="footer_menu__block">
                     <p class="footer_title">
                         <img src="<?=SITE_TEMPLATE_PATH?>/img/footer_before.png" alt="">
                         КАТАЛОГ
                     </p>
-                    <ul class="footer_menu">
-                        <li>
-                            <a href="#">Домашний уход</a>
-                        </li>
-                        <li>
-                            <a href="#">Приборы и аксессуары для волос</a>
-                        </li>
-                        <li>
-                            <a href="#">Выпрямление и восстановление</a>
-                        </li>
-                        <li>
-                            <a href="#">Системы окрашивания</a>
-                        </li>
-                    </ul>
+					<?php
+					$APPLICATION->IncludeComponent("bitrix:menu", "footer_menu",
+						[
+							"ROOT_MENU_TYPE" => "footer-catalog",
+							"MAX_LEVEL" => "1",
+							"CHILD_MENU_TYPE" => "footer-catalog",
+							"USE_EXT" => "N",
+							"DELAY" => "N",
+							"ALLOW_MULTI_SELECT" => "N",
+							"MENU_CACHE_TYPE" => "A",
+							"MENU_CACHE_TIME" => "3600",
+							"MENU_CACHE_USE_GROUPS" => "Y",
+							"MENU_CACHE_GET_VARS" => ""
+						]
+					);?>
                 </div>
             </div>
         </div>

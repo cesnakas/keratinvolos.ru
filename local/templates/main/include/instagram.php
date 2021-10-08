@@ -1,1 +1,1 @@
-https://www.instagram.com/gkhair_russia/
+<a href="https://www.instagram.com/gkhair_russia/" target="_blank">
