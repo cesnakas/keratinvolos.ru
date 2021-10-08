@@ -60,17 +60,35 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                         <p class="social_name">МЫ В СОЦИАЛЬНЫХ СЕТЯХ:</p>
                         <ul class="socials">
                             <li>
-                                <a href="#">
+                                <a href="<?php
+								$APPLICATION->IncludeComponent("bitrix:main.include", "",
+									[
+										"AREA_FILE_SHOW" => "file",
+										"PATH" => SITE_TEMPLATE_PATH."/include/instagram.php"
+									]
+								);?>" target="_blank">
                                     <img src="<?=SITE_TEMPLATE_PATH?>/img/footer_inst.png" alt="">
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="<?php
+								$APPLICATION->IncludeComponent("bitrix:main.include", "",
+									[
+										"AREA_FILE_SHOW" => "file",
+										"PATH" => SITE_TEMPLATE_PATH."/include/vk.php"
+									]
+								);?>" target="_blank">
                                     <img src="<?=SITE_TEMPLATE_PATH?>/img/footer_vk.png" alt="">
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="<?php
+								$APPLICATION->IncludeComponent("bitrix:main.include", "",
+									[
+										"AREA_FILE_SHOW" => "file",
+										"PATH" => SITE_TEMPLATE_PATH."/include/facebook.php"
+									]
+								);?>" target="_blank">
                                     <img src="<?=SITE_TEMPLATE_PATH?>/img/footer_fb.png" alt="">
                                 </a>
                             </li>

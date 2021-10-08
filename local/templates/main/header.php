@@ -54,9 +54,11 @@ use Bitrix\Main\Page\Asset;
 
         <div class="header_middle">
             <div class="container">
+
                 <p class="header_middle__info">
                     ОФИЦИАЛЬНЫЙ ДИСТРИБЬЮТОР GKHAIR / GLOBAL KERATIN В РОССИИ
                 </p>
+
                 <div class="header_middle__contacts">
                     <p class="contact">
                         <span>ОПТ:</span>
@@ -81,11 +83,13 @@ use Bitrix\Main\Page\Asset;
 						);?>
                     </p>
                 </div>
+
             </div>
         </div>
 
         <div class="header_bottom">
             <div class="container">
+
                 <div class="menu_box">
                     <div class="hamburger">
                         <span class="line"></span>
@@ -93,184 +97,113 @@ use Bitrix\Main\Page\Asset;
                         <span class="line"></span>
                     </div>
                 </div>
+
                 <div class="mob_nav">
+
                     <form method="post"  class="search_form">
                         <input type="search" name="search" required="" placeholder="Поиск...">
                         <button type="submit" class="search_btn">
                             <img src="<?=SITE_TEMPLATE_PATH?>/img/search_icon.png" alt="">
                         </button>
                     </form>
-                    <ul class="mobile_nav">
-                        <li>
-                            <a href="<?=SITE_DIR?>about/">
-                                О GKHAIR
-                            </a>
-                        </li>
-                        <li>
-                            <ul>
-                                <li class="w-mob-menu">
-                                    <a href="javascript:void(0);" class="title_dropdown">
-                                        КАТАЛОГ <i class="fas fa-chevron-down"></i>
-                                    </a>
-                                    <div class="default_submenu">
-                                        <a href="#">
-                                            Домашний уход с кератином
-                                        </a>
-                                        <a href="#">
-                                            Окрашивание волос
-                                        </a>
-                                        <a href="#">
-                                            Инструменты и аксессуары
-                                        </a>
-                                        <a href="#">
-                                            Кератиновое выпрямление и восстановление волос
-                                        </a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <ul>
-                                <li class="w-mob-menu">
-                                    <a href="javascript:void(0);" class="title_dropdown">
-                                        ИНФОРМАЦИЯ <i class="fas fa-chevron-down"></i>
-                                    </a>
-                                    <div class="default_submenu">
-                                        <a href="#">
-                                            О GKhair
-                                        </a>
-                                        <a href="#">
-                                            Доставка и оплата
-                                        </a>
-                                        <a href="#">
-                                            Новости
-                                        </a>
-                                        <ul>
-                                            <li class="w-mob-menu--inner">
-                                                <a href="javascript:void(0);" class="title_dropdown--inner">
-                                                    Статьи <i class="fas fa-chevron-down"></i>
-                                                </a>
-                                                <div class="default_submenu--inner">
-                                                    <a href="#">
-                                                        Семинар мастер-класс GKhair
-                                                    </a>
-                                                    <a href="#">
-                                                        Кератиновое выпрямление волос
-                                                    </a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <li class="w-mob-menu--inner">
-                                                <a href="javascript:void(0);" class="title_dropdown--inner">
-                                                    Обучение <i class="fas fa-chevron-down"></i>
-                                                </a>
-                                                <div class="default_submenu--inner">
-                                                    <a href="#">
-                                                        Расписание семинаров GKhair
-                                                    </a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <li class="w-mob-menu--inner">
-                                                <a href="javascript:void(0);" class="title_dropdown--inner">
-                                                    Галерии <i class="fas fa-chevron-down"></i>
-                                                </a>
-                                                <div class="default_submenu--inner">
-                                                    <a href="#">
-                                                        Видеоролики
-                                                    </a>
-                                                    <a href="#">
-                                                        Фотографии
-                                                    </a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <a href="#">
-                                            Сертификаты
-                                        </a>
-                                        <a href="#">
-                                            Вопросы и ответы
-                                        </a>
-                                        <a href="#">
-                                            Сотрудничество
-                                        </a>
-                                        <a href="#">
-                                            Возврат и Обмен
-                                        </a>
-                                        <a href="#">
-                                            Политика конфидициальности
-                                        </a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">
-                                САЛОНАМ
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                ДИЛЛЕРАМ
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                КОНТАКТЫ
-                            </a>
-                        </li>
-                    </ul>
+
+                    <?php
+                    $APPLICATION->IncludeComponent("bitrix:menu", "nav_mobile",
+                        [
+
+                        ]
+					);?>
+
                     <ul class="social">
                         <li>
-                            <a href="#">
+                            <a href="<?php
+								$APPLICATION->IncludeComponent("bitrix:main.include", "",
+									[
+										"AREA_FILE_SHOW" => "file",
+										"PATH" => SITE_TEMPLATE_PATH."/include/instagram.php"
+									]
+								);?>" target="_blank">
                                 <img src="<?=SITE_TEMPLATE_PATH?>/img/inst_fiol.png" alt="">
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="<?php
+							$APPLICATION->IncludeComponent("bitrix:main.include", "",
+								[
+									"AREA_FILE_SHOW" => "file",
+									"PATH" => SITE_TEMPLATE_PATH."/include/vk.php"
+								]
+							);?>" target="_blank">
                                 <img src="<?=SITE_TEMPLATE_PATH?>/img/vk_fiol.png" alt="">
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="<?php
+							$APPLICATION->IncludeComponent("bitrix:main.include", "",
+								[
+									"AREA_FILE_SHOW" => "file",
+									"PATH" => SITE_TEMPLATE_PATH."/include/facebook.php"
+								]
+							);?>" target="_blank">
                                 <img src="<?=SITE_TEMPLATE_PATH?>/img/fb_fiol.png" alt="">
                             </a>
                         </li>
                     </ul>
                     <p class="contact">
-                        <span>
-                            ОПТ:
-                        </span>
+                        <span>ОПТ:</span>
                         <img src="<?=SITE_TEMPLATE_PATH?>/img/phone_icon__gold.png" alt="">
-                        <a href="tel:+78007074868">
-                            +7 (800) 707 48 68
-                        </a>
+						<?php
+						$APPLICATION->IncludeComponent("bitrix:main.include", "",
+							[
+								"AREA_FILE_SHOW" => "file",
+								"PATH" => SITE_TEMPLATE_PATH."/include/phone_opt.php"
+							]
+						);?>
                     </p>
                     <p class="contact">
-                        <span>
-                            ИНТЕРНЕТ МАГАЗИН:
-                        </span>
+                        <span>ИНТЕРНЕТ МАГАЗИН:</span>
                         <img src="<?=SITE_TEMPLATE_PATH?>/img/phone_icon__gold.png" alt="">
-                        <a href="tel:+79690697755">
-                            +7 (969) 069 77 55
-                        </a>
+						<?php
+						$APPLICATION->IncludeComponent("bitrix:main.include", "",
+							[
+								"AREA_FILE_SHOW" => "file",
+								"PATH" => SITE_TEMPLATE_PATH."/include/phone_shop.php"
+							]
+						);?>
                     </p>
                 </div>
+
                 <ul class="social">
                     <li>
-                        <a href="#">
+                        <a href="<?php
+						$APPLICATION->IncludeComponent("bitrix:main.include", "",
+							[
+								"AREA_FILE_SHOW" => "file",
+								"PATH" => SITE_TEMPLATE_PATH."/include/instagram.php"
+							]
+						);?>" target="_blank">
                             <img src="<?=SITE_TEMPLATE_PATH?>/img/inst_fiol.png" alt="">
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="<?php
+						$APPLICATION->IncludeComponent("bitrix:main.include", "",
+							[
+								"AREA_FILE_SHOW" => "file",
+								"PATH" => SITE_TEMPLATE_PATH."/include/vk.php"
+							]
+						);?>" target="_blank">
                             <img src="<?=SITE_TEMPLATE_PATH?>/img/vk_fiol.png" alt="">
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="<?php
+						$APPLICATION->IncludeComponent("bitrix:main.include", "",
+							[
+								"AREA_FILE_SHOW" => "file",
+								"PATH" => SITE_TEMPLATE_PATH."/include/facebook.php"
+							]
+						);?>" target="_blank">
                             <img src="<?=SITE_TEMPLATE_PATH?>/img/fb_fiol.png" alt="">
                         </a>
                     </li>
@@ -284,6 +217,7 @@ use Bitrix\Main\Page\Asset;
                     <a href="<?=SITE_DIR?>" class="logo">
                         <img src="<?=SITE_TEMPLATE_PATH?>/img/logo.png" alt="">
                     </a>
+
                     <ul class="user_nav user_nav__right">
                         <li>
                             <a href="<?=SITE_DIR?>salonam/">САЛОНАМ</a>
@@ -295,26 +229,28 @@ use Bitrix\Main\Page\Asset;
                             <a href="<?=SITE_DIR?>contacts/">КОНТАКТЫ</a>
                         </li>
                     </ul>
+
                 </div>
+
                 <ul class="user_panel">
                     <li>
                         <div class="search_wrapper">
                             <img src="<?=SITE_TEMPLATE_PATH?>/img/search_icon.png" alt="" class="search_icon">
-                            <form method="post"  class="search_form">
+
+                            <form method="post" class="search_form">
                                 <input type="search" name="search" required="" placeholder="Поиск...">
                                 <button type="submit" class="search_btn">
                                     <img src="<?=SITE_TEMPLATE_PATH?>/img/search_icon.png" alt="">
                                 </button>
                                 <div class="search_closed"></div>
                             </form>
+
                         </div>
                     </li>
                     <li>
                         <a href="#">
                             <img src="<?=SITE_TEMPLATE_PATH?>/img/favorite_icon.png" alt="">
-                            <span class="amount">
-                                99
-                            </span>
+                            <span class="amount">99</span>
                         </a>
                     </li>
                     <li>
@@ -325,9 +261,7 @@ use Bitrix\Main\Page\Asset;
                     <li>
                         <a href="#" data-toggle="modal" data-target="#cartModal">
                             <img src="<?=SITE_TEMPLATE_PATH?>/img/cart_icon.png" alt="">
-                            <span class="amount">
-                                0
-                            </span>
+                            <span class="amount">0</span>
                         </a>
                     </li>
                 </ul>

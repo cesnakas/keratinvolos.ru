@@ -1,6 +1,6 @@
 <?php
 require $_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php';
-$APPLICATION->SetTitle('Новая страница');
+$APPLICATION->SetTitle('Статьи детальная');
 ?>
 
 	<div class="section secton_articles_single">
@@ -19,7 +19,7 @@ $APPLICATION->SetTitle('Новая страница');
 					<p class="descr_details">
 						Juvexin является новейшим компонентом, рецептура которого представлена пептидами, белками. Уникальная формула отвечает за то, чтобы при любом окрашивании структура локонов не пострадала. Напротив, ценные элементы попадают в глубокие слои и напитывают волосы влагой, полезными веществами.
 					</p>
-					<img data-src="img/articles_single_1.webp" alt="" class="articles_single_img">
+					<img data-src="<?=SITE_TEMPLATE_PATH?>/img/articles_single_1.webp" alt="" class="articles_single_img">
 					<p class="subtitle_details">
 						Крем-краска Juvexin Cream Color
 					</p>
@@ -81,46 +81,40 @@ $APPLICATION->SetTitle('Новая страница');
 								</span>
 						</p>
 						<a href="#" class="other_articles__item">
-							<img data-src="img/other_articles_1.jpg" alt="" class="other_articles__img">
+							<img data-src="<?=SITE_TEMPLATE_PATH?>/img/other_articles_1.jpg" alt="" class="other_articles__img">
 							<span class="other_articles__title">
 									Система лечения и выпрямления
 								</span>
 						</a>
 						<a href="#" class="other_articles__item">
-							<img data-src="img/other_articles_1.jpg" alt="" class="other_articles__img">
+							<img data-src="<?=SITE_TEMPLATE_PATH?>/img/other_articles_1.jpg" alt="" class="other_articles__img">
 							<span class="other_articles__title">
 									Система лечения и выпрямления
 								</span>
 						</a>
 						<a href="#" class="other_articles__item">
-							<img data-src="img/other_articles_1.jpg" alt="" class="other_articles__img">
+							<img data-src="<?=SITE_TEMPLATE_PATH?>/img/other_articles_1.jpg" alt="" class="other_articles__img">
 							<span class="other_articles__title">
 									Система лечения и выпрямления
 								</span>
 						</a>
 						<a href="#" class="other_articles__item">
-							<img data-src="img/other_articles_1.jpg" alt="" class="other_articles__img">
+							<img data-src="<?=SITE_TEMPLATE_PATH?>/img/other_articles_1.jpg" alt="" class="other_articles__img">
 							<span class="other_articles__title">
 									Система лечения и выпрямления
 								</span>
 						</a>
 						<a href="#" class="other_articles__item">
-							<img data-src="img/other_articles_1.jpg" alt="" class="other_articles__img">
-							<span class="other_articles__title">
-									Система лечения и выпрямления
-								</span>
+							<img data-src="<?=SITE_TEMPLATE_PATH?>/img/other_articles_1.jpg" alt="" class="other_articles__img">
+							<span class="other_articles__title">Система лечения и выпрямления</span>
 						</a>
 						<a href="#" class="other_articles__item">
-							<img data-src="img/other_articles_1.jpg" alt="" class="other_articles__img">
-							<span class="other_articles__title">
-									Система лечения и выпрямления
-								</span>
+							<img data-src="<?=SITE_TEMPLATE_PATH?>/img/other_articles_1.jpg" alt="" class="other_articles__img">
+							<span class="other_articles__title">Система лечения и выпрямления</span>
 						</a>
 						<a href="#" class="other_articles__item">
-							<img data-src="img/other_articles_1.jpg" alt="" class="other_articles__img">
-							<span class="other_articles__title">
-									Система лечения и выпрямления
-								</span>
+							<img data-src="<?=SITE_TEMPLATE_PATH?>/img/other_articles_1.jpg" alt="" class="other_articles__img">
+							<span class="other_articles__title">Система лечения и выпрямления</span>
 						</a>
 					</div>
 				</div>
