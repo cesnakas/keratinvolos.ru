@@ -100,12 +100,13 @@ use Bitrix\Main\Page\Asset;
 
                 <div class="mob_nav">
 
-                    <form method="post"  class="search_form">
-                        <input type="search" name="search" required="" placeholder="Поиск...">
-                        <button type="submit" class="search_btn">
-                            <img src="<?=SITE_TEMPLATE_PATH?>/img/search_icon.png" alt="">
-                        </button>
-                    </form>
+					<?php
+					$APPLICATION->IncludeComponent("bitrix:search.form", "",
+						[
+							"USE_SUGGEST" => "N",
+							"PAGE" => "#SITE_DIR#search/"
+						]
+					);?>
 
                     <?php
                     $APPLICATION->IncludeComponent("bitrix:menu", "nav_header-mobile",
@@ -207,7 +208,6 @@ use Bitrix\Main\Page\Asset;
                     <li>
                         <div class="search_wrapper">
                             <img src="<?=SITE_TEMPLATE_PATH?>/img/search_icon.png" alt="" class="search_icon">
-
 							<?php
 							$APPLICATION->IncludeComponent("bitrix:search.form", "",
 								[
@@ -215,7 +215,6 @@ use Bitrix\Main\Page\Asset;
 									"PAGE" => "#SITE_DIR#search/"
 								]
 							);?>
-
                         </div>
                     </li>
                     <li>
