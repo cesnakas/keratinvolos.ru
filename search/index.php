@@ -3,6 +3,9 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("Поиск по сайту");
 ?>
 
+	<div class="section">
+		<div class="container">
+
 <?php
 $APPLICATION->IncludeComponent(
     "bitrix:search.page",
@@ -51,6 +54,9 @@ $APPLICATION->IncludeComponent(
 		"AJAX_OPTION_ADDITIONAL" => ""
 	]
 );?>
+
+		</div>
+	</div>
 
 <?php
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php");

@@ -16,34 +16,33 @@ $this->setFrameMode(true);
 
 <form class="search_form" action="<?=$arResult["FORM_ACTION"]?>">
 
-    <?if($arParams["USE_SUGGEST"] === "Y"):?>
+    <?php if($arParams["USE_SUGGEST"] === "Y"): ?>
 
-        <?$APPLICATION->IncludeComponent(
+        <?php
+        $APPLICATION->IncludeComponent(
             "bitrix:search.suggest.input",
             "",
-            array(
+            [
                 "NAME" => "q",
                 "VALUE" => "",
                 "INPUT_SIZE" => 15,
                 "DROPDOWN_SIZE" => 10,
-            ),
-            $component, array("HIDE_ICONS" => "Y")
+            ],
+            $component,
+            ["HIDE_ICONS" => "Y"]
         );?>
 
-    <?else:?>
+    <?php else: ?>
 
-        <input type="text" name="q" value="" size="15" maxlength="50" />
+        <input type="search" name="q" value="" placeholder="Поиск..."/>
 
-    <?endif;?>
+    <?php endif; ?>
 
-    <input name="s" type="submit" value="<?=GetMessage("BSF_T_SEARCH_BUTTON");?>" />
+    <input hidden name="s" type="submit" value="<?=GetMessage("BSF_T_SEARCH_BUTTON");?>"/>
 
-</form>
-
-<form method="post" class="search_form">
-    <input type="search" name="search" required="" placeholder="Поиск...">
-    <button type="submit" class="search_btn">
+    <button type="submit" name="s" class="search_btn">
         <img src="<?=SITE_TEMPLATE_PATH?>/img/search_icon.png" alt="">
     </button>
     <div class="search_closed"></div>
+
 </form>

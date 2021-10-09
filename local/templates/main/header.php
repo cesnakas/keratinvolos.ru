@@ -216,14 +216,6 @@ use Bitrix\Main\Page\Asset;
 								]
 							);?>
 
-                            <!--<form method="post" class="search_form">
-                                <input type="search" name="search" required="" placeholder="Поиск...">
-                                <button type="submit" class="search_btn">
-                                    <img src="<?/*=SITE_TEMPLATE_PATH*/?>/img/search_icon.png" alt="">
-                                </button>
-                                <div class="search_closed"></div>
-                            </form>-->
-
                         </div>
                     </li>
                     <li>
@@ -277,6 +269,4 @@ use Bitrix\Main\Page\Asset;
                 </div>
             </div>
         </div>
-    <?php
-    endif;
-    ?>
+    <?php endif; ?>
