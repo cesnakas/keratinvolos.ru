@@ -147,7 +147,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                 <a href="#" class="site_map">
                     Карта сайта
                 </a>
-                <a href="#" class="logo_jw" target="_blank">
+                <a href="https://joywin.ru/" class="logo_jw" target="_blank">
                     <img src="<?=SITE_TEMPLATE_PATH?>/img/logo_jw.png" alt="">
                 </a>
             </div>
