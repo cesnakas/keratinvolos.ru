@@ -61,7 +61,7 @@ $APPLICATION->SetTitle("Доставка и оплата");
                     <p class="inner-content">
                         С помощью Visa/Mastercard при получении
                     </p>
-                    <img data-src="img/visa-payment.png" alt="">
+                    <img data-src="<?=SITE_TEMPLATE_PATH?>/img/visa-payment.png" alt="">
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-12 payment">
                     <p class="subtitle">
