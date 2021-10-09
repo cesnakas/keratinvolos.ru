@@ -208,13 +208,21 @@ use Bitrix\Main\Page\Asset;
                         <div class="search_wrapper">
                             <img src="<?=SITE_TEMPLATE_PATH?>/img/search_icon.png" alt="" class="search_icon">
 
-                            <form method="post" class="search_form">
+							<?php
+							$APPLICATION->IncludeComponent("bitrix:search.form", "",
+								[
+									"USE_SUGGEST" => "Y",
+									"PAGE" => "#SITE_DIR#search/"
+								]
+							);?>
+
+                            <!--<form method="post" class="search_form">
                                 <input type="search" name="search" required="" placeholder="Поиск...">
                                 <button type="submit" class="search_btn">
-                                    <img src="<?=SITE_TEMPLATE_PATH?>/img/search_icon.png" alt="">
+                                    <img src="<?/*=SITE_TEMPLATE_PATH*/?>/img/search_icon.png" alt="">
                                 </button>
                                 <div class="search_closed"></div>
-                            </form>
+                            </form>-->
 
                         </div>
                     </li>
