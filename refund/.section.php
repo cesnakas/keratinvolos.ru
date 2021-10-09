@@ -1,4 +1,3 @@
-<?
-$sSectionName = "Новый раздел";
-$arDirProperties = array();
-?>
+<?php
+$sSectionName = "Возврат и обмен";
+$arDirProperties = [];
