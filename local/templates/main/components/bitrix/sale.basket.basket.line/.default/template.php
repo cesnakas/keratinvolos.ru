@@ -1,4 +1,5 @@
-<?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
+<?php
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /**
  * @global string $componentPath
  * @global string $templateName
@@ -8,20 +9,21 @@ $cartStyle = 'bx-basket';
 $cartId = "bx_basket".$this->randString();
 $arParams['cartId'] = $cartId;
 
-if ($arParams['POSITION_FIXED'] == 'Y')
-{
+if ($arParams['POSITION_FIXED'] == 'Y') {
 	$cartStyle .= "-fixed {$arParams['POSITION_HORIZONTAL']} {$arParams['POSITION_VERTICAL']}";
 	if ($arParams['SHOW_PRODUCTS'] == 'Y')
 		$cartStyle .= ' bx-closed';
-}
-else
-{
+} else {
 	$cartStyle .= ' bx-opener';
 }
-?><script>
+?>
+
+<script>
 var <?=$cartId?> = new BitrixSmallCart;
 </script>
-<div id="<?=$cartId?>" class="<?=$cartStyle?>"><?
+
+<div id="<?=$cartId?>" class="<?=$cartStyle?>">
+    <?php
 	/** @var \Bitrix\Main\Page\FrameBuffered $frame */
 	$frame = $this->createFrame($cartId, false)->begin();
 		require(realpath(dirname(__FILE__)).'/ajax_template.php');
@@ -30,7 +32,9 @@ var <?=$cartId?> = new BitrixSmallCart;
 		require(realpath(dirname(__FILE__)).'/top_template.php');
 		unset($arResult['COMPOSITE_STUB']);
 	$frame->end();
-?></div>
+    ?>
+</div>
+
 <script type="text/javascript">
 	<?=$cartId?>.siteId       = '<?=SITE_ID?>';
 	<?=$cartId?>.cartId       = '<?=$cartId?>';

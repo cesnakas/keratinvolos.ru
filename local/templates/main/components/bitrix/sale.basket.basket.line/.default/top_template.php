@@ -1,4 +1,5 @@
-<?if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED!==true) die();
+<?php
+if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
 /**
  * @global array $arParams
  * @global CUser $USER
@@ -6,8 +7,10 @@
  * @global string $cartId
  */
 $compositeStub = (isset($arResult['COMPOSITE_STUB']) && $arResult['COMPOSITE_STUB'] == 'Y');
-?><div class="bx-hdr-profile">
-<?if (!$compositeStub && $arParams['SHOW_AUTHOR'] == 'Y'):?>
+?>
+
+<div class="bx-hdr-profile">
+<?php if (!$compositeStub && $arParams['SHOW_AUTHOR'] == 'Y'): ?>
 	<div class="bx-basket-block">
 		<i class="fa fa-user"></i>
 		<?if ($USER->IsAuthorized()):
@@ -70,14 +73,16 @@ $compositeStub = (isset($arResult['COMPOSITE_STUB']) && $arResult['COMPOSITE_STU
 		<?endif?>
 	</div>
 <?endif?>
-	<div class="bx-basket-block"><?
-		if (!$arResult["DISABLE_USE_BASKET"])
-		{
-			?><i class="fa fa-shopping-cart"></i>
-			<a href="<?= $arParams['PATH_TO_BASKET'] ?>"><?= GetMessage('TSB1_CART') ?></a><?
-		}
 
-		if (!$compositeStub)
+	<div class="bx-basket-block">
+        <?php if (!$arResult["DISABLE_USE_BASKET"]) { ?>
+            <i class="fa fa-shopping-cart"></i>
+			<a href="<?= $arParams['PATH_TO_BASKET'] ?>">
+                <?= GetMessage('TSB1_CART') ?>
+            </a>
+        <?php } ?>
+
+		<?php if (!$compositeStub)
 		{
 			if ($arParams['SHOW_NUM_PRODUCTS'] == 'Y' && ($arResult['NUM_PRODUCTS'] > 0 || $arParams['SHOW_EMPTY_VALUES'] == 'Y'))
 			{
@@ -102,4 +107,5 @@ $compositeStub = (isset($arResult['COMPOSITE_STUB']) && $arResult['COMPOSITE_STU
 			</div>
 		<?endif?>
 	</div>
+
 </div>

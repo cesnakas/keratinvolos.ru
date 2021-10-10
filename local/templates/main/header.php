@@ -250,7 +250,7 @@ use Bitrix\Main\Page\Asset;
 							"SHOW_PERSONAL_LINK" => "N",
 							"PATH_TO_PERSONAL" => SITE_DIR."personal/",
 
-							"SHOW_AUTHOR" => "Y",
+							"SHOW_AUTHOR" => "N",
 							"PATH_TO_REGISTER" => SITE_DIR."login/",
                             "PATH_TO_AUTHORIZE" => SITE_DIR."auth/",
 							"PATH_TO_PROFILE" => SITE_DIR."personal/",
