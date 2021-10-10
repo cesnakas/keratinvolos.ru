@@ -223,6 +223,7 @@ use Bitrix\Main\Page\Asset;
                             <span class="amount">99</span>
                         </a>
                     </li>
+
                     <li>
                         <a href="#" data-toggle="modal" data-target="#loginModal">
                             <img src="<?=SITE_TEMPLATE_PATH?>/img/user_icon.png" alt="">
@@ -234,6 +235,41 @@ use Bitrix\Main\Page\Asset;
                             <span class="amount">0</span>
                         </a>
                     </li>
+
+					<?php
+                    $APPLICATION->IncludeComponent(
+                        "bitrix:sale.basket.basket.line",
+                        "",
+                        [
+							"PATH_TO_BASKET" => SITE_DIR."personal/cart/",
+							"PATH_TO_ORDER" => SITE_DIR."personal/order/make/",
+							"SHOW_NUM_PRODUCTS" => "Y",
+							"SHOW_TOTAL_PRICE" => "N",
+							"SHOW_EMPTY_VALUES" => "Y",
+
+							"SHOW_PERSONAL_LINK" => "N",
+							"PATH_TO_PERSONAL" => SITE_DIR."personal/",
+
+							"SHOW_AUTHOR" => "Y",
+							"PATH_TO_REGISTER" => SITE_DIR."login/",
+                            "PATH_TO_AUTHORIZE" => SITE_DIR."auth/",
+							"PATH_TO_PROFILE" => SITE_DIR."personal/",
+
+							"SHOW_PRODUCTS" => "Y",
+							"SHOW_DELAY" => "N",
+							"SHOW_NOTAVAIL" => "N",
+							"SHOW_IMAGE" => "Y",
+							"SHOW_PRICE" => "Y",
+							"SHOW_SUMMARY" => "Y",
+
+							"POSITION_FIXED" => "N",
+							// "POSITION_VERTICAL" => "top",
+							// "POSITION_HORIZONTAL" => "right",
+
+							"HIDE_ON_BASKET_PAGES" => "N",
+						]
+					);?>
+
                 </ul>
             </div>
         </div>
