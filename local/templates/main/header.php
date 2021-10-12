@@ -287,11 +287,9 @@ use Bitrix\Main\Page\Asset;
     ?>
         <div class="section section_page_title">
             <div class="container">
-                <p class="page_title">
-                    <?php
-                    $APPLICATION->ShowTitle(false);
-                    ?>
-                </p>
+
+                <h1 class="page_title"><?php $APPLICATION->ShowTitle(false); ?></h1>
+
                 <div class="breadcrumbs">
 					<?php
                     $APPLICATION->IncludeComponent("bitrix:breadcrumb", "",
