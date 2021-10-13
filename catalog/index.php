@@ -232,7 +232,6 @@ $APPLICATION->IncludeComponent(
 			3 => "",
 		),
 		"DETAIL_DISPLAY_NAME" => "Y",
-		"DETAIL_ADD_DETAIL_TO_SLIDER" => "N",
 		"SHOW_DISCOUNT_PERCENT" => "Y",
 		"SHOW_OLD_PRICE" => "Y",
 		"DETAIL_SHOW_MAX_QUANTITY" => "N",
@@ -253,7 +252,7 @@ $APPLICATION->IncludeComponent(
 		"SIDEBAR_SECTION_SHOW" => "Y",
 		"SIDEBAR_DETAIL_SHOW" => "N",
 		"SIDEBAR_PATH" => "/examples/index_inc.php",
-		"AJAX_OPTION_ADDITIONAL" => "",
+
 		"SEF_URL_TEMPLATES" => array(
 			"sections" => "",
 			"section" => "#SECTION_CODE#/",
