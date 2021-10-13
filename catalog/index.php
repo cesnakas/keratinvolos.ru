@@ -2,6 +2,11 @@
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetTitle("Каталог");
 ?>
+	<style>
+		.content {
+			min-height: 100vh;
+		}
+	</style>
 
 <?php
 $APPLICATION->IncludeComponent(
@@ -11,8 +16,17 @@ $APPLICATION->IncludeComponent(
 		"IBLOCK_ID" => "1",
 		"IBLOCK_TYPE" => "catalog",
 
+		"HIDE_NOT_AVAILABLE" => "Y",
+
+		"SEF_MODE" => "Y",
+		"SEF_URL_TEMPLATES" => [
+			"sections" => "",
+			"section" => "#SECTION_CODE#/",
+			"element" => "#SECTION_CODE#/#ELEMENT_CODE#/",
+			"compare" => "compare/",
+		],
+
 		"TEMPLATE_THEME" => "blue",
-		"HIDE_NOT_AVAILABLE" => "N",
 		"BASKET_URL" => "/personal/cart/",
 		"ACTION_VARIABLE" => "action",
 		"PRODUCT_ID_VARIABLE" => "id",
@@ -22,7 +36,6 @@ $APPLICATION->IncludeComponent(
 		"PRODUCT_PROPS_VARIABLE" => "prop",
 		"PARTIAL_PRODUCT_PROPERTIES" => "Y",
 		"COMMON_SHOW_CLOSE_POPUP" => "N",
-		"SEF_MODE" => "Y",
 		"SEF_FOLDER" => "/catalog/",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
@@ -252,13 +265,6 @@ $APPLICATION->IncludeComponent(
 		"SIDEBAR_SECTION_SHOW" => "Y",
 		"SIDEBAR_DETAIL_SHOW" => "N",
 		"SIDEBAR_PATH" => "/examples/index_inc.php",
-
-		"SEF_URL_TEMPLATES" => array(
-			"sections" => "",
-			"section" => "#SECTION_CODE#/",
-			"element" => "#SECTION_CODE#/#ELEMENT_CODE#/",
-			"compare" => "compare/",
-		)
 	],
 	false
 );?>
