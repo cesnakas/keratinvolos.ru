@@ -27,11 +27,36 @@ $APPLICATION->IncludeComponent(
 			"compare" => "compare/",
 		],
 
+        "SECTION_COUNT_ELEMENTS" => "N",
+        "SHOW_TOP_ELEMENTS" => "N",
+
+		// catalog.section
+		"ELEMENT_SORT_ORDER" => "ASC",
+		"ELEMENT_SORT_FIELD" => "NAME",
+		"ELEMENT_SORT_ORDER2" => "DESC",
+		"ELEMENT_SORT_FIELD2" => "SORT",
+
 		"USE_MAIN_ELEMENT_SECTION" => "Y",
         "DETAIL_STRICT_SECTION_CHECK" => "N",
         "SET_LAST_MODIFIED" => "Y",
 
 		"SET_TITLE" => "Y",
+        "ADD_SECTIONS_CHAIN" => "Y",
+        "ADD_ELEMENT_CHAIN" => "Y",
+
+        "USE_SALE_BESTSELLERS" => "N",
+
+        "USE_FILTER" => "Y",
+        "FILTER_NAME" => "",
+        "FILTER_VIEW_MODE" => "VERTICAL",
+        "FILTER_HIDE_ON_MOBILE" => "Y",
+        "AJAX_OPTION_ADDITIONAL" => "Y",
+
+        "PRICE_CODE" => ["BASE"],
+        "USE_PRICE_COUNT" => "Y",
+        "SHOW_PRICE_COUNT" => "1",
+        "PRICE_VAT_INCLUDE" => "Y",
+        "PRICE_VAT_SHOW_VALUE" => "N",
 
 		"ADD_PICT_PROP" => "",
 		"LABEL_PROP" => "",
@@ -46,7 +71,7 @@ $APPLICATION->IncludeComponent(
         "AJAX_OPTION_HISTORY" => "Y",
 
         "CACHE_TYPE" => "A",
-        "CACHE_TIME" => "",
+        "CACHE_TIME" => "360000",
         "CACHE_FILTER" => "Y",
         "CACHE_GROUPS" => "Y",
 
