@@ -7,7 +7,43 @@ $APPLICATION->SetTitle("Каталог");
         <div class="container">
             <div class="catalog-block">
 
-                <!--aside-->
+                <aside class="catalog-left">
+                    <p class="catalog-title">КАТЕГОРИ ТОВАРОВ</p>
+
+					<?php
+                    $APPLICATION->IncludeComponent("bitrix:catalog.smart.filter", ".default",
+						[
+							"IBLOCK_ID" => "1",
+							"IBLOCK_TYPE" => "catalog",
+							"SECTION_ID" => "1",
+							"SECTION_CODE" => "",
+							"FILTER_NAME" => "arrFilter",
+							"COMPONENT_TEMPLATE" => "",
+							"HIDE_NOT_AVAILABLE" => "N",
+							"TEMPLATE_THEME" => "blue",
+							"FILTER_VIEW_MODE" => "horizontal",
+							"DISPLAY_ELEMENT_COUNT" => "Y",
+							"SEF_MODE" => "Y",
+							"CACHE_TYPE" => "A",
+							"CACHE_TIME" => "36000000",
+							"CACHE_GROUPS" => "Y",
+							"SAVE_IN_SESSION" => "N",
+							"INSTANT_RELOAD" => "Y",
+							"PAGER_PARAMS_NAME" => "arrPager",
+							"PRICE_CODE" => ["BASE"],
+							"CONVERT_CURRENCY" => "Y",
+							"XML_EXPORT" => "N",
+							"SECTION_TITLE" => "-",
+							"SECTION_DESCRIPTION" => "-",
+							"POPUP_POSITION" => "left",
+							"SEF_RULE" => "/catalog/#SECTION_ID#/filter/#SMART_FILTER_PATH#/apply/",
+							"SECTION_CODE_PATH" => "",
+							"SMART_FILTER_PATH" => $_REQUEST["SMART_FILTER_PATH"],
+							"CURRENCY_ID" => "RUB"
+						],
+						false
+					);?>
+                </aside>
 
                 <div class="catalog-right">
 
@@ -21,35 +57,57 @@ $APPLICATION->SetTitle("Каталог");
 							"SECTION_ID" => $_REQUEST["SECTION_ID"],
 							"SECTION_CODE" => $_REQUEST["SECTION_CODE"],
 
-							"ACTION_VARIABLE" => "action",
-							"ADD_PICT_PROP" => "-",
-							"ADD_PROPERTIES_TO_BASKET" => "Y",
-							"ADD_SECTIONS_CHAIN" => "N",
-							"ADD_TO_BASKET_ACTION" => "ADD",
+							"SEF_MODE" => "Y",
+							"SECTION_ID_VARIABLE" => "SECTION_ID",
+							"SECTION_URL" => "/catalog/#SECTION_CODE#/",
+							"DETAIL_URL" => "/catalog/#SECTION_CODE#/#ELEMENT_CODE#/",
+
+							"ELEMENT_SORT_ORDER" => "asc",
+							"ELEMENT_SORT_FIELD" => "name",
+							"ELEMENT_SORT_ORDER2" => "asc",
+							"ELEMENT_SORT_FIELD2" => "SCALED_PRICE_1",
+
+							"TEMPLATE_THEME" => "",
+
+							"PRODUCT_SUBSCRIPTION" => "Y",
+
 							"AJAX_MODE" => "N",
 							"AJAX_OPTION_ADDITIONAL" => "",
 							"AJAX_OPTION_HISTORY" => "N",
 							"AJAX_OPTION_JUMP" => "N",
 							"AJAX_OPTION_STYLE" => "Y",
+
+							"CACHE_TYPE" => "A",
+							"CACHE_TIME" => "360000",
+							"CACHE_GROUPS" => "Y",
+
+							"PRICE_CODE" => ["BASE"],
+							"USE_PRICE_COUNT" => "N",
+							"SHOW_PRICE_COUNT" => "1",
+							"PRICE_VAT_INCLUDE" => "Y",
+							"CONVERT_CURRENCY" => "N",
+
+							"BASKET_URL" => "/basket/",
+							"USE_PRODUCT_QUANTITY" => "Y",
+							"PRODUCT_QUANTITY_VARIABLE" => "quantity",
+							"ADD_PROPERTIES_TO_BASKET" => "Y",
+							"ADD_TO_BASKET_ACTION" => "ADD",
+							"PRODUCT_PROPS_VARIABLE" => "prop",
+							"PARTIAL_PRODUCT_PROPERTIES" => "N",
+
+
+							"ACTION_VARIABLE" => "action",
+							"ADD_PICT_PROP" => "-",
+							"ADD_SECTIONS_CHAIN" => "N",
 							"BACKGROUND_IMAGE" => "-",
-							"BASKET_URL" => "/personal/basket.php",
 							"BROWSER_TITLE" => "-",
 							"CACHE_FILTER" => "N",
-							"CACHE_GROUPS" => "Y",
-							"CACHE_TIME" => "36000000",
-							"CACHE_TYPE" => "A",
 							"COMPATIBLE_MODE" => "Y",
-							"CONVERT_CURRENCY" => "N",
 							"CUSTOM_FILTER" => "",
-							"DETAIL_URL" => "",
 							"DISABLE_INIT_JS_IN_COMPONENT" => "N",
 							"DISPLAY_BOTTOM_PAGER" => "Y",
 							"DISPLAY_COMPARE" => "N",
 							"DISPLAY_TOP_PAGER" => "N",
-							"ELEMENT_SORT_FIELD" => "sort",
-							"ELEMENT_SORT_FIELD2" => "id",
-							"ELEMENT_SORT_ORDER" => "asc",
-							"ELEMENT_SORT_ORDER2" => "desc",
 							"ENLARGE_PRODUCT" => "STRICT",
 							"FILTER_NAME" => "arrFilter",
 							"HIDE_NOT_AVAILABLE" => "N",
@@ -77,21 +135,12 @@ $APPLICATION->SetTitle("Каталог");
 							"PAGER_TEMPLATE" => ".default",
 							"PAGER_TITLE" => "Товары",
 							"PAGE_ELEMENT_COUNT" => "18",
-							"PARTIAL_PRODUCT_PROPERTIES" => "N",
-							"PRICE_CODE" => array(),
-							"PRICE_VAT_INCLUDE" => "Y",
 							"PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
 							"PRODUCT_ID_VARIABLE" => "id",
-							"PRODUCT_PROPS_VARIABLE" => "prop",
-							"PRODUCT_QUANTITY_VARIABLE" => "quantity",
 							"PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false}]",
-							"PRODUCT_SUBSCRIPTION" => "Y",
 							"RCM_PROD_ID" => $_REQUEST["PRODUCT_ID"],
 							"RCM_TYPE" => "personal",
-							"SECTION_ID_VARIABLE" => "SECTION_ID",
-							"SECTION_URL" => "",
 							"SECTION_USER_FIELDS" => array("",""),
-							"SEF_MODE" => "N",
 							"SET_BROWSER_TITLE" => "Y",
 							"SET_LAST_MODIFIED" => "N",
 							"SET_META_DESCRIPTION" => "Y",
@@ -105,15 +154,11 @@ $APPLICATION->SetTitle("Каталог");
 							"SHOW_FROM_SECTION" => "N",
 							"SHOW_MAX_QUANTITY" => "N",
 							"SHOW_OLD_PRICE" => "N",
-							"SHOW_PRICE_COUNT" => "1",
 							"SHOW_SLIDER" => "Y",
 							"SLIDER_INTERVAL" => "3000",
 							"SLIDER_PROGRESS" => "N",
-							"TEMPLATE_THEME" => "blue",
 							"USE_ENHANCED_ECOMMERCE" => "N",
 							"USE_MAIN_ELEMENT_SECTION" => "N",
-							"USE_PRICE_COUNT" => "N",
-							"USE_PRODUCT_QUANTITY" => "N"
 						],
 						false
 					);?>
