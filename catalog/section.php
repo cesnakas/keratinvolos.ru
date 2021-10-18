@@ -10,24 +10,44 @@ $APPLICATION->SetTitle("Разделы");
 				<aside class="catalog-left">
 					<p class="catalog-title">КАТЕГОРИ ТОВАРОВ</p>
 					<?php
-                    $APPLICATION->IncludeComponent("bitrix:catalog.smart.filter", "",
+					$APPLICATION->IncludeComponent(
+						"bitrix:catalog.smart.filter",
+						".default",
 						[
 							"IBLOCK_ID" => "1",
 							"IBLOCK_TYPE" => "catalog",
-							"SECTION_ID" => "1",
-							"SECTION_CODE" => "",
-
+							"SECTION_ID" => "",
+							"SECTION_CODE" => $_REQUEST["SECTION_CODE"],
+							"FILTER_NAME" => "arrFilter",
+							"COMPONENT_TEMPLATE" => ".default",
+							"HIDE_NOT_AVAILABLE" => "Y",
+							"TEMPLATE_THEME" => "",
+							"FILTER_VIEW_MODE" => "vertical",
+							"POPUP_POSITION" => "right",
+							"DISPLAY_ELEMENT_COUNT" => "Y",
 							"SEF_MODE" => "Y",
-
-							"FILTER_VIEW_MODE" => "horizontal",
-                            "POPUP_POSITION" => "right",
-
-                            "HIDE_NOT_AVAILABLE" => "Y",
-                            "DISPLAY_ELEMENT_COUNT" => "Y",
-                            
-                        ],
-                        false
-                    );?>
+							"CACHE_TYPE" => "A",
+							"CACHE_TIME" => "360000",
+							"CACHE_GROUPS" => "Y",
+							"SAVE_IN_SESSION" => "N",
+							"INSTANT_RELOAD" => "Y",
+							"PAGER_PARAMS_NAME" => "arrPager",
+							"PRICE_CODE" => [
+								0 => "BASE",
+							],
+							"CONVERT_CURRENCY" => "N",
+							"XML_EXPORT" => "N",
+							"SECTION_TITLE" => "-",
+							"SECTION_DESCRIPTION" => "-",
+							"SEF_RULE" => "/catalog/#SECTION_CODE#/filter/#SMART_FILTER_PATH#/apply/",
+							"SECTION_CODE_PATH" => "",
+							"SMART_FILTER_PATH" => $_REQUEST["SMART_FILTER_PATH"],
+							"CURRENCY_ID" => "RUB",
+							"SHOW_ALL_WO_SECTION" => "Y",
+							"PREFILTER_NAME" => "smartPreFilter"
+						],
+						false
+					);?>
 				</aside>
 
 				<div class="catalog-right">

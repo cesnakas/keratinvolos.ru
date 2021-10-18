@@ -11,35 +11,41 @@ $APPLICATION->SetTitle("Каталог");
                     <p class="catalog-title">КАТЕГОРИ ТОВАРОВ</p>
 
 					<?php
-                    $APPLICATION->IncludeComponent("bitrix:catalog.smart.filter", ".default",
+					$APPLICATION->IncludeComponent(
+						"bitrix:catalog.smart.filter",
+						".default",
 						[
 							"IBLOCK_ID" => "1",
 							"IBLOCK_TYPE" => "catalog",
-							"SECTION_ID" => "1",
-							"SECTION_CODE" => "",
+							"SECTION_ID" => "",
+							"SECTION_CODE" => $_REQUEST["SECTION_CODE"],
 							"FILTER_NAME" => "arrFilter",
-							"COMPONENT_TEMPLATE" => "",
-							"HIDE_NOT_AVAILABLE" => "N",
-							"TEMPLATE_THEME" => "blue",
-							"FILTER_VIEW_MODE" => "horizontal",
+							"COMPONENT_TEMPLATE" => ".default",
+							"HIDE_NOT_AVAILABLE" => "Y",
+							"TEMPLATE_THEME" => "",
+							"FILTER_VIEW_MODE" => "vertical",
+							"POPUP_POSITION" => "right",
 							"DISPLAY_ELEMENT_COUNT" => "Y",
 							"SEF_MODE" => "Y",
 							"CACHE_TYPE" => "A",
-							"CACHE_TIME" => "36000000",
+							"CACHE_TIME" => "360000",
 							"CACHE_GROUPS" => "Y",
 							"SAVE_IN_SESSION" => "N",
 							"INSTANT_RELOAD" => "Y",
 							"PAGER_PARAMS_NAME" => "arrPager",
-							"PRICE_CODE" => ["BASE"],
-							"CONVERT_CURRENCY" => "Y",
+							"PRICE_CODE" => [
+								0 => "BASE",
+							],
+							"CONVERT_CURRENCY" => "N",
 							"XML_EXPORT" => "N",
 							"SECTION_TITLE" => "-",
 							"SECTION_DESCRIPTION" => "-",
-							"POPUP_POSITION" => "left",
-							"SEF_RULE" => "/catalog/#SECTION_ID#/filter/#SMART_FILTER_PATH#/apply/",
+							"SEF_RULE" => "/catalog/#SECTION_CODE#/filter/#SMART_FILTER_PATH#/apply/",
 							"SECTION_CODE_PATH" => "",
 							"SMART_FILTER_PATH" => $_REQUEST["SMART_FILTER_PATH"],
-							"CURRENCY_ID" => "RUB"
+							"CURRENCY_ID" => "RUB",
+                            "SHOW_ALL_WO_SECTION" => "Y",
+							"PREFILTER_NAME" => "smartPreFilter"
 						],
 						false
 					);?>
@@ -54,7 +60,7 @@ $APPLICATION->SetTitle("Каталог");
 						[
 							"IBLOCK_ID" => "1",
 							"IBLOCK_TYPE" => "catalog",
-							"SECTION_ID" => $_REQUEST["SECTION_ID"],
+							// "SECTION_ID" => $_REQUEST["SECTION_ID"],
 							"SECTION_CODE" => $_REQUEST["SECTION_CODE"],
 
 							"SEF_MODE" => "Y",
@@ -63,9 +69,9 @@ $APPLICATION->SetTitle("Каталог");
 							"DETAIL_URL" => "/catalog/#SECTION_CODE#/#ELEMENT_CODE#/",
 
 							"ELEMENT_SORT_ORDER" => "asc",
-							"ELEMENT_SORT_FIELD" => "name",
+							"ELEMENT_SORT_FIELD" => "SCALED_PRICE_1",
 							"ELEMENT_SORT_ORDER2" => "asc",
-							"ELEMENT_SORT_FIELD2" => "SCALED_PRICE_1",
+							"ELEMENT_SORT_FIELD2" => "name",
 
 							"TEMPLATE_THEME" => "",
 
@@ -73,7 +79,7 @@ $APPLICATION->SetTitle("Каталог");
 
 							"AJAX_MODE" => "N",
 							"AJAX_OPTION_ADDITIONAL" => "",
-							"AJAX_OPTION_HISTORY" => "N",
+							"AJAX_OPTION_HISTORY" => "Y",
 							"AJAX_OPTION_JUMP" => "N",
 							"AJAX_OPTION_STYLE" => "Y",
 
