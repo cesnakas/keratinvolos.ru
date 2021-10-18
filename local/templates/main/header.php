@@ -282,7 +282,8 @@ use Bitrix\Main\Page\Asset;
     <?php
     if (
         !CSite::InDir(SITE_DIR.'index.php') &&
-        !CSite::InDir(SITE_DIR.'catalog/')
+        !CSite::InDir(SITE_DIR.'catalog/') &&
+        !CSite::InDir(SITE_DIR.'~index.php')
     ):
     ?>
         <div class="section section_page_title">
