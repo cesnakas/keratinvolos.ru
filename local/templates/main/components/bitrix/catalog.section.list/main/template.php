@@ -52,14 +52,13 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
 		<div class="product_list__item">
 
 			<a href="#" class="product_list__title">
-                <? $arSection['SECTION'] = $arResult['SECTIONS'] ?>
-                <?= $arSection['SECTION']['NAME'] ?>
-                ДОМАШНИЙ УХОД С КЕРАТИНОМ
+                <?=$arResult['SECTIONS']['0']['NAME']?>
             </a>
 
 			<ul class="product_list__descr">
 				<? foreach ($arResult['SECTIONS'] as $arSection): ?>
 				<li>
+                    <!--<pre><?/*var_dump($arSection)*/?></pre>-->
                     <a href="<?=$arSection['SECTION_PAGE_URL']?>">
                         <?=$arSection['NAME']?>
                     </a>

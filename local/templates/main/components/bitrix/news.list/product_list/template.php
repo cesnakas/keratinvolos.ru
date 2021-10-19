@@ -10,6 +10,7 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 /** @var string $templateFile */
 /** @var string $templateFolder */
 /** @var string $componentPath */
+/** @var array $templateData */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
@@ -107,7 +108,7 @@ $this->setFrameMode(true);
 </div>
 
 <!--//-->
-
+<?/*
 <div class="news-list">
 <?if($arParams["DISPLAY_TOP_PAGER"]):?>
 	<?=$arResult["NAV_STRING"]?><br />
@@ -180,3 +181,4 @@ $this->setFrameMode(true);
 	<br /><?=$arResult["NAV_STRING"]?>
 <?endif;?>
 </div>
+*/?>

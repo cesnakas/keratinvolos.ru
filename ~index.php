@@ -111,7 +111,7 @@ $APPLICATION->SetTitle("Новая страница");
             <p class="section_title">НАШИ ТОВАРЫ <span>GKHAIR</span></p>
             <p class="section_subtitle">В нашим интернет-магазне вы можете выбрать и <br> купить любые товары продукции GKhair</p>
 
-            <!--<div class="product_list__wrapper">
+            <div class="product_list__wrapper">
                 <div class="product_list__left">
 
                     <div class="product_list__item">
@@ -140,7 +140,7 @@ $APPLICATION->SetTitle("Новая страница");
                                 <a href="#">Наборы GKhair</a>
                             </li>
                         </ul>
-                        <img data-src="<?/*=SITE_TEMPLATE_PATH*/?>/img/product_list_1.png" alt="" class="product_list_img">
+                        <img data-src="<?=SITE_TEMPLATE_PATH?>/img/product_list_1.png" alt="" class="product_list_img">
 
                     </div>
                 </div>
@@ -167,7 +167,7 @@ $APPLICATION->SetTitle("Новая страница");
                                     <a href="#">Фиксатор цвета</a>
                                 </li>
                             </ul>
-                            <img data-src="<?/*=SITE_TEMPLATE_PATH*/?>/img/product_list_2.png" alt="" class="product_list_img">
+                            <img data-src="<?=SITE_TEMPLATE_PATH?>/img/product_list_2.png" alt="" class="product_list_img">
                         </div>
 
                         <div class="product_list__item product_list__item__branch">
@@ -183,7 +183,7 @@ $APPLICATION->SetTitle("Новая страница");
                                     <a href="#">Аксессуары</a>
                                 </li>
                             </ul>
-                            <img data-src="<?/*=SITE_TEMPLATE_PATH*/?>/img/product_list_3.png" alt="" class="product_list_img">
+                            <img data-src="<?=SITE_TEMPLATE_PATH?>/img/product_list_3.png" alt="" class="product_list_img">
                         </div>
 
                     </div>
@@ -195,21 +195,11 @@ $APPLICATION->SetTitle("Новая страница");
                                 <a href="#">Кератин для волос</a>
                             </li>
                         </ul>
-                        <img data-src="<?/*=SITE_TEMPLATE_PATH*/?>/img/product_list_4.webp" alt="" class="product_list_img">
+                        <img data-src="<?=SITE_TEMPLATE_PATH?>/img/product_list_4.webp" alt="" class="product_list_img">
                     </div>
 
                 </div>
-            </div>-->
-
-            <?php
-            $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "main",
-                [
-					"IBLOCK_ID" => "1",
-					"IBLOCK_TYPE" => "catalog",
-                    "VIEW_MODE" => "TILE",
-                ],
-                false
-            );?>
+            </div>
 
             <div class="btn_wrapper">
                 <a href="#" class="btn btn_transparent">СМОТРЕТЬ ВЕСЬ КАТАЛОГ</a>
