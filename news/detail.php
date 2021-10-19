@@ -30,6 +30,16 @@ $APPLICATION->SetTitle("Новость");
         </div>
     </div>-->
 
+    <?$APPLICATION->IncludeComponent("bitrix:news.detail", "news",
+        [
+            "IBLOCK_ID" => "3",
+			"ELEMENT_ID" => $_REQUEST["ELEMENT_ID"],
+            "IBLOCK_URL" => "/news/",
+			"DETAIL_URL" => "/news/detail.php?ID=#ELEMENT_ID#/",
+        ],
+        false
+    );?>
+
     <div class="section secton_articles_single">
         <div class="container">
             <div class="row">

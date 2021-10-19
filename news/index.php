@@ -28,146 +28,27 @@ $APPLICATION->SetTitle("Новости");
     <?$APPLICATION->IncludeComponent("bitrix:news.list", "news",
         [
             "IBLOCK_ID" => "3",
+			"IBLOCK_TYPE" => "news",
             "NEWS_COUNT" => "9",
 
+			"PARENT_SECTION" => $_REQUEST["SECTION_ID"],
+			"PARENT_SECTION_CODE" => $_REQUEST["SECTION_CODE"],
+            // "DETAIL_URL" => "/news/detail.php?ID=#ELEMENT_ID#/",
+			"DETAIL_URL" => "/news/#ELEMENT_CODE#/",
+
+			"SORT_ORDER1" => "DESC",
+			"SORT_BY1" => "ACTIVE_FROM",
+			"SORT_ORDER2" => "ASC",
+			"SORT_BY2" => "SORT",
+
+			"AJAX_MODE" => "N",
+			"AJAX_OPTION_JUMP" => "N",
+			"AJAX_OPTION_STYLE" => "Y",
+			"AJAX_OPTION_HISTORY" => "Y",
+			"AJAX_OPTION_ADDITIONAL" => "",
         ],
         false
     );?>
-
-    <div class="section section_articles">
-        <div class="container">
-
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="news_item">
-                        <img data-src="<?=SITE_TEMPLATE_PATH?>/img/news_1.jpg" alt="" class="news_img">
-                        <p class="news_title">
-                            СТОЙКИЙ КРАСИТЕЛЬ <br> С КЕРАТИНОМ
-                        </p>
-                        <p class="news_descr">
-                            Современное окрашивание должно сочетать в себе несколько факторов – богатую палитру оттенков...
-                        </p>
-                        <a href="#" class="more">
-                            ПОДРОБНЕЕ
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="news_item">
-                        <img data-src="<?=SITE_TEMPLATE_PATH?>/img/news_2.jpg" alt="" class="news_img">
-                        <p class="news_title">
-                            УХОДОВЫЕ ПРОДУКТЫ<br> С КЕРАТИНОМ
-                        </p>
-                        <p class="news_descr">
-                            Правильно подобранный уход – основное условия здоровья и красоты волос, вне зависимости...
-                        </p>
-                        <a href="#" class="more">
-                            ПОДРОБНЕЕ
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="news_item">
-                        <img data-src="<?=SITE_TEMPLATE_PATH?>/img/news_3.jpg" alt="" class="news_img">
-                        <p class="news_title">
-                            СТАЙЛИНГ НОВОГО <br> ПОКОЛЕНИЯ
-                        </p>
-                        <p class="news_descr">
-                            Основная задача стайлинговых средств – фиксировать укладку и сделать ее как можно более долговечной..
-                        </p>
-                        <a href="#" class="more">
-                            ПОДРОБНЕЕ
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="news_item">
-                        <img data-src="<?=SITE_TEMPLATE_PATH?>/img/news_1.jpg" alt="" class="news_img">
-                        <p class="news_title">
-                            СТОЙКИЙ КРАСИТЕЛЬ <br> С КЕРАТИНОМ
-                        </p>
-                        <p class="news_descr">
-                            Современное окрашивание должно сочетать в себе несколько факторов – богатую палитру оттенков...
-                        </p>
-                        <a href="#" class="more">
-                            ПОДРОБНЕЕ
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="news_item">
-                        <img data-src="<?=SITE_TEMPLATE_PATH?>/img/news_2.jpg" alt="" class="news_img">
-                        <p class="news_title">
-                            УХОДОВЫЕ ПРОДУКТЫ<br> С КЕРАТИНОМ
-                        </p>
-                        <p class="news_descr">
-                            Правильно подобранный уход – основное условия здоровья и красоты волос, вне зависимости...
-                        </p>
-                        <a href="#" class="more">
-                            ПОДРОБНЕЕ
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="news_item">
-                        <img data-src="<?=SITE_TEMPLATE_PATH?>/img/news_3.jpg" alt="" class="news_img">
-                        <p class="news_title">
-                            СТАЙЛИНГ НОВОГО <br> ПОКОЛЕНИЯ
-                        </p>
-                        <p class="news_descr">
-                            Основная задача стайлинговых средств – фиксировать укладку и сделать ее как можно более долговечной..
-                        </p>
-                        <a href="#" class="more">
-                            ПОДРОБНЕЕ
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="news_item">
-                        <img data-src="<?=SITE_TEMPLATE_PATH?>/img/news_1.jpg" alt="" class="news_img">
-                        <p class="news_title">
-                            СТОЙКИЙ КРАСИТЕЛЬ <br> С КЕРАТИНОМ
-                        </p>
-                        <p class="news_descr">
-                            Современное окрашивание должно сочетать в себе несколько факторов – богатую палитру оттенков...
-                        </p>
-                        <a href="#" class="more">
-                            ПОДРОБНЕЕ
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="news_item">
-                        <img data-src="<?=SITE_TEMPLATE_PATH?>/img/news_2.jpg" alt="" class="news_img">
-                        <p class="news_title">
-                            УХОДОВЫЕ ПРОДУКТЫ<br> С КЕРАТИНОМ
-                        </p>
-                        <p class="news_descr">
-                            Правильно подобранный уход – основное условия здоровья и красоты волос, вне зависимости...
-                        </p>
-                        <a href="#" class="more">
-                            ПОДРОБНЕЕ
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="news_item">
-                        <img data-src="<?=SITE_TEMPLATE_PATH?>/img/news_3.jpg" alt="" class="news_img">
-                        <p class="news_title">
-                            СТАЙЛИНГ НОВОГО <br> ПОКОЛЕНИЯ
-                        </p>
-                        <p class="news_descr">
-                            Основная задача стайлинговых средств – фиксировать укладку и сделать ее как можно более долговечной..
-                        </p>
-                        <a href="#" class="more">
-                            ПОДРОБНЕЕ
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
 
 <?php
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php");
