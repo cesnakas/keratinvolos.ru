@@ -47,13 +47,24 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
 ?>
 
 <div class="product_list__wrapper">
-	<div class="product_list__left">
 
+	<div class="product_list__left">
 		<div class="product_list__item">
 
-			<a href="#" class="product_list__title">ДОМАШНИЙ УХОД С КЕРАТИНОМ</a>
+			<a href="#" class="product_list__title">
+                <? $arSection['SECTION'] = $arResult['SECTIONS'] ?>
+                <?= $arSection['SECTION']['NAME'] ?>
+                ДОМАШНИЙ УХОД С КЕРАТИНОМ
+            </a>
 
 			<ul class="product_list__descr">
+				<? foreach ($arResult['SECTIONS'] as $arSection): ?>
+				<li>
+                    <a href="<?=$arSection['SECTION_PAGE_URL']?>">
+                        <?=$arSection['NAME']?>
+                    </a>
+                </li>
+                <!--
 				<li>
 					<a href="#">Шампуни и кондиционеры</a>
 				</li>
@@ -75,6 +86,8 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
 				<li>
 					<a href="#">Наборы GKhair</a>
 				</li>
+				-->
+                <? endforeach; ?>
 			</ul>
 
 			<img data-src="<?=SITE_TEMPLATE_PATH?>/img/product_list_1.png" alt="" class="product_list_img">
@@ -136,4 +149,13 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
 		</div>
 
 	</div>
+
 </div>
+
+<?php
+// foreach ($arResult['SECTIONS'] as &$arSection) {
+?>
+
+<?php
+// }
+?>
