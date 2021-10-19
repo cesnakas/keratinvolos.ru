@@ -1,4 +1,5 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+<?php
+if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
@@ -12,6 +13,101 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
+
+<div class="product_list__wrapper">
+    <div class="product_list__left">
+
+        <div class="product_list__item">
+
+            <a href="#" class="product_list__title">ДОМАШНИЙ УХОД С КЕРАТИНОМ</a>
+
+            <ul class="product_list__descr">
+                <li>
+                    <a href="#">Шампуни и кондиционеры</a>
+                </li>
+                <li>
+                    <a href="#">Маски с кератином</a>
+                </li>
+                <li>
+                    <a href="#">Крема для волос</a>
+                </li>
+                <li>
+                    <a href="#">Спреи для волос</a>
+                </li>
+                <li>
+                    <a href="#">Сыворотки и масла</a>
+                </li>
+                <li>
+                    <a href="#">Стайлинг для волос</a>
+                </li>
+                <li>
+                    <a href="#">Наборы GKhair</a>
+                </li>
+            </ul>
+
+            <img data-src="<?=SITE_TEMPLATE_PATH?>/img/product_list_1.png" alt="" class="product_list_img">
+
+        </div>
+    </div>
+
+    <div class="product_list__right">
+        <div class="product_list__right__branch">
+
+            <div class="product_list__item product_list__item__branch">
+                <a href="#" class="product_list__title">ОКРАШИВАНИЕ ВОЛОС</a>
+                <ul class="product_list__descr">
+                    <li>
+                        <a href="#">Крем краситель для волос</a>
+                    </li>
+                    <li>
+                        <a href="#">Осветляющие средства</a>
+                    </li>
+                    <li>
+                        <a href="#">Оксиданты</a>
+                    </li>
+                    <li>
+                        <a href="#">Защитная добавка</a>
+                    </li>
+                    <li>
+                        <a href="#">Фиксатор цвета</a>
+                    </li>
+                </ul>
+                <img data-src="<?=SITE_TEMPLATE_PATH?>/img/product_list_2.png" alt="" class="product_list_img">
+            </div>
+
+            <div class="product_list__item product_list__item__branch">
+                <a href="#" class="product_list__title product_list__title__inner">ИНСТРУМЕНТЫ И АКСЕССУАРЫ</a>
+                <ul class="product_list__descr">
+                    <li>
+                        <a href="#">Электроприборы</a>
+                    </li>
+                    <li>
+                        <a href="#">Расчески</a>
+                    </li>
+                    <li>
+                        <a href="#">Аксессуары</a>
+                    </li>
+                </ul>
+                <img data-src="<?=SITE_TEMPLATE_PATH?>/img/product_list_3.png" alt="" class="product_list_img">
+            </div>
+
+        </div>
+
+        <div class="product_list__item product_list__item__bottom">
+            <a href="#" class="product_list__title">КЕРАТИНОВОЕ ВЫПРЯМЛЕНИЕ И ВОССТАНОВЛЕНИЕ ВОЛОС</a>
+            <ul class="product_list__descr">
+                <li>
+                    <a href="#">Кератин для волос</a>
+                </li>
+            </ul>
+            <img data-src="<?=SITE_TEMPLATE_PATH?>/img/product_list_4.webp" alt="" class="product_list_img">
+        </div>
+
+    </div>
+</div>
+
+<!--//-->
+
 <div class="news-list">
 <?if($arParams["DISPLAY_TOP_PAGER"]):?>
 	<?=$arResult["NAV_STRING"]?><br />
