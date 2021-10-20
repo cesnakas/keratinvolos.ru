@@ -8,10 +8,7 @@ use Bitrix\Main\Localization\Loc;
 		<img src="" alt="">
 	</div>
 	<div class="bx-sbb-empty-cart-text"><?=Loc::getMessage("SBB_EMPTY_BASKET_TITLE")?></div>
-	<?
-	if (!empty($arParams['EMPTY_BASKET_HINT_PATH']))
-	{
-		?>
+	<? if (!empty($arParams['EMPTY_BASKET_HINT_PATH'])) { ?>
 		<div class="bx-sbb-empty-cart-desc">
 			<?=Loc::getMessage(
 				'SBB_EMPTY_BASKET_HINT',
@@ -21,7 +18,5 @@ use Bitrix\Main\Localization\Loc;
 				]
 			)?>
 		</div>
-		<?
-	}
-	?>
+    <? } ?>
 </div>

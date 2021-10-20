@@ -9,7 +9,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
 $compositeStub = (isset($arResult['COMPOSITE_STUB']) && $arResult['COMPOSITE_STUB'] == 'Y');
 ?>
 
-<div class="bx-hdr-profile">
+<?/*
 <?php if (!$compositeStub && $arParams['SHOW_AUTHOR'] == 'Y'): ?>
 	<div class="bx-basket-block">
 		<i class="fa fa-user"></i>
@@ -73,39 +73,17 @@ $compositeStub = (isset($arResult['COMPOSITE_STUB']) && $arResult['COMPOSITE_STU
 		<?endif?>
 	</div>
 <?endif?>
+*/?>
 
-	<div class="bx-basket-block">
-        <?php if (!$arResult["DISABLE_USE_BASKET"]) { ?>
-            <i class="fa fa-shopping-cart"></i>
-			<a href="<?= $arParams['PATH_TO_BASKET'] ?>">
-                <?= GetMessage('TSB1_CART') ?>
-            </a>
-        <?php } ?>
+    <a href="<?=$arParams['PATH_TO_BASKET']?>" data-toggle="modal" data-target="#cartModal">
+        <? if (!$arResult["DISABLE_USE_BASKET"]) { ?>
+            <img src="<?=SITE_TEMPLATE_PATH?>/img/cart_icon.png" alt="">
+        <? } ?>
 
-		<?php if (!$compositeStub)
-		{
+		<? if (!$compositeStub) {
 			if ($arParams['SHOW_NUM_PRODUCTS'] == 'Y' && ($arResult['NUM_PRODUCTS'] > 0 || $arParams['SHOW_EMPTY_VALUES'] == 'Y'))
-			{
-				echo $arResult['BASKET_COUNT_DESCRIPTION'];
-
-				if ($arParams['SHOW_TOTAL_PRICE'] == 'Y')
-				{
-					?>
-					<br <? if ($arParams['POSITION_FIXED'] == 'Y'): ?>class="hidden-xs"<? endif; ?>/>
-					<span>
-						<?=GetMessage('TSB1_TOTAL_PRICE')?> <strong><?=$arResult['TOTAL_PRICE']?></strong>
-					</span>
-					<?
-				}
-			}
-		}
-
-		if ($arParams['SHOW_PERSONAL_LINK'] == 'Y'):?>
-			<div style="padding-top: 4px;">
-			<span class="icon_info"></span>
-			<a href="<?=$arParams['PATH_TO_PERSONAL']?>"><?=GetMessage('TSB1_PERSONAL')?></a>
-			</div>
-		<?endif?>
-	</div>
-
-</div>
+			{ ?>
+                <span class="amount"><?=$arResult['NUM_PRODUCTS']?></span>
+			<? } ?>
+		<? } ?>
+    </a>

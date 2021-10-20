@@ -229,17 +229,11 @@ use Bitrix\Main\Page\Asset;
                             <img src="<?=SITE_TEMPLATE_PATH?>/img/user_icon.png" alt="">
                         </a>
                     </li>
-                    <li>
-                        <a href="#" data-toggle="modal" data-target="#cartModal">
-                            <img src="<?=SITE_TEMPLATE_PATH?>/img/cart_icon.png" alt="">
-                            <span class="amount">0</span>
-                        </a>
-                    </li>
 
 					<?php
                     $APPLICATION->IncludeComponent(
                         "bitrix:sale.basket.basket.line",
-                        "",
+                        "header",
                         [
 							"PATH_TO_BASKET" => SITE_DIR."basket/",
 							"PATH_TO_ORDER" => SITE_DIR."personal/order/make/",
@@ -255,7 +249,7 @@ use Bitrix\Main\Page\Asset;
                             "PATH_TO_AUTHORIZE" => SITE_DIR."auth/",
 							"PATH_TO_PROFILE" => SITE_DIR."personal/",
 
-							"SHOW_PRODUCTS" => "Y",
+							"SHOW_PRODUCTS" => "N",
 							"SHOW_DELAY" => "N",
 							"SHOW_NOTAVAIL" => "N",
 							"SHOW_IMAGE" => "Y",
@@ -263,8 +257,6 @@ use Bitrix\Main\Page\Asset;
 							"SHOW_SUMMARY" => "Y",
 
 							"POSITION_FIXED" => "N",
-							// "POSITION_VERTICAL" => "top",
-							// "POSITION_HORIZONTAL" => "right",
 
 							"HIDE_ON_BASKET_PAGES" => "N",
 						]
