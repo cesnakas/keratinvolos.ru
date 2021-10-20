@@ -225,9 +225,15 @@ use Bitrix\Main\Page\Asset;
                     </li>
 
                     <li>
+                        <?if($USER->IsAuthorized()):?>
+                        <a href="/personal/">
+                            <img src="<?=SITE_TEMPLATE_PATH?>/img/user_icon.png" alt="">
+                        </a>
+                        <?else:?>
                         <a href="#" data-toggle="modal" data-target="#loginModal">
                             <img src="<?=SITE_TEMPLATE_PATH?>/img/user_icon.png" alt="">
                         </a>
+                        <?endif;?>
                     </li>
 
 					<?php

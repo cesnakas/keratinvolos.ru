@@ -10,7 +10,6 @@ if ($USER->IsAuthorized()) {
 ?>
 
 <?php
-/*
 $logout = $APPLICATION->GetCurPageParam(
 	'logout=yes',
 	[
@@ -21,7 +20,7 @@ $logout = $APPLICATION->GetCurPageParam(
 		'change_password'
 	]
 );
-*/?>
+?>
 
 	<div class="section section_page_title">
 		<div class="container">

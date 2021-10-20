@@ -131,7 +131,7 @@ if ($arParams["SHOW_PRODUCTS"] == "Y" && ($arResult['NUM_PRODUCTS'] > 0 || !empt
             <div class="empty_cart_block" style="text-align: center;">
 
                 <img src="<?=SITE_TEMPLATE_PATH?>/img/empty_cart_icon.png" alt="">
-
+                <br><br>
                 <p class="empty_info">КОРЗИНА ПУСТА</p>
                 <br>
                 <a href="/catalog/" class="btn btn_yellow">В КАТАЛОГ</a>

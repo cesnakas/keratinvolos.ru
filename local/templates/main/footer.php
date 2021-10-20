@@ -155,11 +155,22 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
     </footer>
 
     <!-- login -->
-    <div class="modal fade login-modal" id="loginModal">
+    <?$APPLICATION->IncludeComponent(
+        "bitrix:system.auth.form",
+        "main",
+        Array(
+            "REGISTER_URL" => "/auth/",
+            "FORGOT_PASSWORD_URL" => "/auth/",
+            "PROFILE_URL" => "profile.php",
+            "SHOW_ERRORS" => "Y"
+        )
+    );?>
+
+    <!--<div class="modal fade login-modal" id="loginModal">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <a href="#" data-dismiss="modal" class="close">
-                    <img src="<?=SITE_TEMPLATE_PATH?>/img/close.png" alt="">
+                    <img src="<?/*=SITE_TEMPLATE_PATH*/?>/img/close.png" alt="">
                 </a>
                 <form method="post">
                     <p class="modal_title">
@@ -192,14 +203,15 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                         <span class="checkmark"></span>
                     </label>
                     <div class="registered_block">
-                        <img src="<?=SITE_TEMPLATE_PATH?>/img/user_login_icon.png" alt="">
+                        <img src="<?/*=SITE_TEMPLATE_PATH*/?>/img/user_login_icon.png" alt="">
                         <p>Нет аккаунта?</p>
                         <a href="#">ЗАРЕГИСТРИРОВАТЬСЯ</a>
                     </div>
                 </form>
             </div>
         </div>
-    </div>
+    </div>-->
+
     <!-- /login -->
 
     <!-- basket -->
