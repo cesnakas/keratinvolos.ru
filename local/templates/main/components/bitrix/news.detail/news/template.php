@@ -23,8 +23,10 @@ $this->setFrameMode(true);
 			<div class="col-xl-9 col-lg-8 col-md-12 col-sm-12 col-12">
 
                 <p class="page_title_details">
-                    ОКРАШИВАНИЕ ВОЛОС
+					<?=$arResult["NAME"]?>
                 </p>
+
+				<?=$arResult["DETAIL_TEXT"]?>
 
 			</div>
 			<div class="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">

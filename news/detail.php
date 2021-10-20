@@ -34,8 +34,10 @@ $APPLICATION->SetTitle("Новость");
         [
             "IBLOCK_ID" => "3",
 			"ELEMENT_ID" => $_REQUEST["ELEMENT_ID"],
+            "ELEMENT_CODE" => $_REQUEST["ELEMENT_CODE"],
             "IBLOCK_URL" => "/news/",
-			"DETAIL_URL" => "/news/detail.php?ID=#ELEMENT_ID#/",
+			// "DETAIL_URL" => "/news/detail.php?ID=#ELEMENT_ID#/",
+			"DETAIL_URL" => "/news/#ELEMENT_CODE#/",
         ],
         false
     );?>
