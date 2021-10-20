@@ -11,8 +11,6 @@ if ($arParams["SHOW_PRODUCTS"] == "Y" && ($arResult['NUM_PRODUCTS'] > 0 || !empt
 {
 ?>
 
-
-
 	<div class="modal-content" data-role="basket-item-list">
         <a href="#" data-dismiss="modal" class="close"><img src="<?=SITE_TEMPLATE_PATH?>/img/close.png" alt=""></a>
         <p class="modal_title">КОРЗИНА</p>
@@ -64,7 +62,7 @@ if ($arParams["SHOW_PRODUCTS"] == "Y" && ($arResult['NUM_PRODUCTS'] > 0 || !empt
 
                 </div>
 
-                <!-- // -->
+                <?/*
 
 					<div class="bx-basket-item-list-item">
 
@@ -87,7 +85,7 @@ if ($arParams["SHOW_PRODUCTS"] == "Y" && ($arResult['NUM_PRODUCTS'] > 0 || !empt
 							<?endif?>
 						</div>
 
-						<?if (true):/*$category != "SUBSCRIBE") TODO */?>
+						<?if (true): // $category != "SUBSCRIBE") TODO?>
 							<div class="bx-basket-item-list-item-price-block">
 								<?if ($arParams["SHOW_PRICE"] == "Y"):?>
 									<div class="bx-basket-item-list-item-price"><strong><?=$v["PRICE_FMT"]?></strong></div>
@@ -105,6 +103,7 @@ if ($arParams["SHOW_PRODUCTS"] == "Y" && ($arResult['NUM_PRODUCTS'] > 0 || !empt
 						<?endif?>
 
 					</div>
+                    */?>
 
 				<?endforeach?>
 
@@ -121,10 +120,32 @@ if ($arParams["SHOW_PRODUCTS"] == "Y" && ($arResult['NUM_PRODUCTS'] > 0 || !empt
 		<?endif?>
 	</div>
 
-	<script>
-		BX.ready(function(){
-			<?=$cartId?>.fixCart();
-		});
-	</script>
+<?
+} else {
+?>
+
+    <div class="modal-dialog modal-dialog-centered empty-cart-modal">
+        <div id="<?=$cartId?>products" class="modal-content">
+            <a href="#" data-dismiss="modal" class="close"><img src="<?=SITE_TEMPLATE_PATH?>/img/close.png" alt=""></a>
+            <p class="modal_title">КОРЗИНА</p>
+            <div class="empty_cart_block" style="text-align: center;">
+
+                <img src="<?=SITE_TEMPLATE_PATH?>/img/empty_cart_icon.png" alt="">
+
+                <p class="empty_info">КОРЗИНА ПУСТА</p>
+                <br>
+                <a href="/catalog/" class="btn btn_yellow">В КАТАЛОГ</a>
+
+            </div>
+        </div>
+    </div>
+
 <?
 }
+?>
+
+<script>
+    BX.ready(function(){
+		<?=$cartId?>.fixCart();
+    });
+</script>
