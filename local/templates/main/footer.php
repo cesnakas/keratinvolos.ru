@@ -154,6 +154,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
         </div>
     </footer>
 
+    <!-- login -->
     <div class="modal fade login-modal" id="loginModal">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -199,211 +200,44 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
             </div>
         </div>
     </div>
-
-    <div class="modal fade empty-cart-modal" id="emptyCartModal">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <a href="#" data-dismiss="modal" class="close">
-                    <img src="<?=SITE_TEMPLATE_PATH?>/img/close.png" alt="">
-                </a>
-                <p class="modal_title">
-                    КОРЗИНА
-                </p>
-                <div class="empty_cart_block">
-                    <img src="<?=SITE_TEMPLATE_PATH?>/img/empty_cart_icon.png" alt="">
-                    <p class="empty_info">
-                        КОРЗИНА ПУСТА
-                    </p>
-                    <a href="#" class="btn btn_yellow">
-                        В КАТАЛОГ
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade cart-modal" id="_cartModal">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <a href="#" data-dismiss="modal" class="close">
-                    <img src="<?=SITE_TEMPLATE_PATH?>/img/close.png" alt="">
-                </a>
-                <p class="modal_title">
-                    КОРЗИНА
-                </p>
-
-                <div class="cart_item_wrapper">
-                    <a href="#" class="cart_item">
-                            <span class="cart_item__img">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/cart_img_1.png" alt="">
-                            </span>
-                        <span class="cart_item__right">
-                                <small class="cart_item__title">CBD Кондиционер GKhair: CBD Conditioner Vegan Line</small>
-                                <small class="cart_item__price"><b>1 х</b> 1 690 Р</small>
-                            </span>
-                    </a>
-                    <a href="#" class="cart_item">
-                            <span class="cart_item__img">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/cart_img_1.png" alt="">
-                            </span>
-                        <span class="cart_item__right">
-                                <small class="cart_item__title">CBD Кондиционер GKhair: CBD Conditioner Vegan Line</small>
-                                <small class="cart_item__price"><b>1 х</b> 1 690 Р</small>
-                            </span>
-                    </a>
-                    <a href="#" class="cart_item">
-                            <span class="cart_item__img">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/cart_img_1.png" alt="">
-                            </span>
-                        <span class="cart_item__right">
-                                <small class="cart_item__title">CBD Кондиционер GKhair: CBD Conditioner Vegan Line</small>
-                                <small class="cart_item__price"><b>1 х</b> 1 690 Р</small>
-                            </span>
-                    </a>
-                    <a href="#" class="cart_item">
-                            <span class="cart_item__img">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/cart_img_1.png" alt="">
-                            </span>
-                        <span class="cart_item__right">
-                                <small class="cart_item__title">CBD Кондиционер GKhair: CBD Conditioner Vegan Line</small>
-                                <small class="cart_item__price"><b>1 х</b> 1 690 Р</small>
-                            </span>
-                    </a>
-                    <a href="#" class="cart_item">
-                            <span class="cart_item__img">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/cart_img_1.png" alt="">
-                            </span>
-                        <span class="cart_item__right">
-                                <small class="cart_item__title">CBD Кондиционер GKhair: CBD Conditioner Vegan Line</small>
-                                <small class="cart_item__price"><b>1 х</b> 1 690 Р</small>
-                            </span>
-                    </a>
-                    <a href="#" class="cart_item">
-                            <span class="cart_item__img">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/cart_img_1.png" alt="">
-                            </span>
-                        <span class="cart_item__right">
-                                <small class="cart_item__title">CBD Кондиционер GKhair: CBD Conditioner Vegan Line</small>
-                                <small class="cart_item__price"><b>1 х</b> 1 690 Р</small>
-                            </span>
-                    </a>
-                    <a href="#" class="cart_item">
-                            <span class="cart_item__img">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/cart_img_1.png" alt="">
-                            </span>
-                        <span class="cart_item__right">
-                                <small class="cart_item__title">CBD Кондиционер GKhair: CBD Conditioner Vegan Line</small>
-                                <small class="cart_item__price"><b>1 х</b> 1 690 Р</small>
-                            </span>
-                    </a>
-                </div>
-
-                <p class="cart_total">
-                    СУММА:
-                    <span>
-                            5 000 Р
-                        </span>
-                </p>
-                <a href="#" class="btn btn_yellow__bordered" data-toggle="modal" data-target="#clickModal">
-                    КУПИТЬ В 1 КЛИК
-                </a>
-                <a href="#" class="btn btn_yellow">
-                    ОФОРМИТЬ ЗАКАЗ
-                </a>
-            </div>
-        </div>
-    </div>
+    <!-- /login -->
 
     <!-- basket -->
-
-    <?php
-/*    $APPLICATION->IncludeComponent(
-        "bitrix:sale.basket.basket.line",
-        "footer",
-        [
-            "PATH_TO_BASKET" => SITE_DIR."basket/",
-            "PATH_TO_ORDER" => SITE_DIR."personal/order/make/",
-            "SHOW_NUM_PRODUCTS" => "Y",
-            "SHOW_TOTAL_PRICE" => "Y",
-            "SHOW_EMPTY_VALUES" => "Y",
-
-            "SHOW_PERSONAL_LINK" => "Y",
-            "PATH_TO_PERSONAL" => SITE_DIR."personal/",
-
-            "SHOW_AUTHOR" => "N",
-            "PATH_TO_REGISTER" => SITE_DIR."login/",
-            "PATH_TO_AUTHORIZE" => SITE_DIR."auth/",
-            "PATH_TO_PROFILE" => SITE_DIR."personal/",
-
-            "SHOW_PRODUCTS" => "Y",
-            "SHOW_DELAY" => "Y",
-            "SHOW_NOTAVAIL" => "Y",
-            "SHOW_IMAGE" => "Y",
-            "SHOW_PRICE" => "Y",
-            "SHOW_SUMMARY" => "Y",
-
-            "POSITION_FIXED" => "N",
-
-            "HIDE_ON_BASKET_PAGES" => "N",
-        ]
-    );*/?>
-
     <div class="modal fade cart-modal" id="cartModal">
         <div class="modal-dialog modal-dialog-centered">
-            <!--<div class="modal-content">-->
-                <!--<a href="#" data-dismiss="modal" class="close"><img src="<?/*=SITE_TEMPLATE_PATH*/?>/img/close.png" alt=""></a>
-                <p class="modal_title">КОРЗИНА</p>
-                <div class="cart_item_wrapper">-->
 
-					<?php
-					$APPLICATION->IncludeComponent(
-						"bitrix:sale.basket.basket.line",
-						"footer",
-						[
-							"PATH_TO_BASKET" => SITE_DIR."basket/",
-							"PATH_TO_ORDER" => SITE_DIR."personal/order/make/",
-							"SHOW_NUM_PRODUCTS" => "Y",
-							"SHOW_TOTAL_PRICE" => "Y",
-							"SHOW_EMPTY_VALUES" => "Y",
+            <?php
+            $APPLICATION->IncludeComponent(
+                "bitrix:sale.basket.basket.line",
+                "footer",
+                [
+                    "PATH_TO_BASKET" => SITE_DIR."basket/",
+                    "PATH_TO_ORDER" => SITE_DIR."personal/order/make/",
+                    "SHOW_NUM_PRODUCTS" => "Y",
+                    "SHOW_TOTAL_PRICE" => "Y",
+                    "SHOW_EMPTY_VALUES" => "Y",
 
-							"SHOW_PERSONAL_LINK" => "N",
-							"PATH_TO_PERSONAL" => SITE_DIR."personal/",
+                    "SHOW_PERSONAL_LINK" => "N",
+                    "PATH_TO_PERSONAL" => SITE_DIR."personal/",
 
-							"SHOW_AUTHOR" => "N",
-							"PATH_TO_REGISTER" => SITE_DIR."login/",
-							"PATH_TO_AUTHORIZE" => SITE_DIR."auth/",
-							"PATH_TO_PROFILE" => SITE_DIR."personal/",
+                    "SHOW_AUTHOR" => "N",
+                    "PATH_TO_REGISTER" => SITE_DIR."login/",
+                    "PATH_TO_AUTHORIZE" => SITE_DIR."auth/",
+                    "PATH_TO_PROFILE" => SITE_DIR."personal/",
 
-							"SHOW_PRODUCTS" => "Y",
-							"SHOW_DELAY" => "Y",
-							"SHOW_NOTAVAIL" => "Y",
-							"SHOW_IMAGE" => "Y",
-							"SHOW_PRICE" => "Y",
-							"SHOW_SUMMARY" => "Y",
+                    "SHOW_PRODUCTS" => "Y",
+                    "SHOW_DELAY" => "Y",
+                    "SHOW_NOTAVAIL" => "Y",
+                    "SHOW_IMAGE" => "Y",
+                    "SHOW_PRICE" => "Y",
+                    "SHOW_SUMMARY" => "Y",
 
-							"POSITION_FIXED" => "N",
+                    "POSITION_FIXED" => "N",
 
-							"HIDE_ON_BASKET_PAGES" => "N",
-						]
-					);?>
+                    "HIDE_ON_BASKET_PAGES" => "N",
+                ]
+            );?>
 
-                    <!--
-                    <a href="#" class="cart_item">
-                        <span class="cart_item__img">
-                            <img src="<?/*=SITE_TEMPLATE_PATH*/?>/img/cart_img_1.png" alt="">
-                        </span>
-                        <span class="cart_item__right">
-                            <small class="cart_item__title">CBD Кондиционер GKhair: CBD Conditioner Vegan Line</small>
-                            <small class="cart_item__price"><b>1 х</b> 1 690 Р</small>
-                        </span>
-                    </a>
-                    -->
-
-                <!--</div>-->
-                <!--<p class="cart_total">СУММА: <span>5 000 Р</span></p>
-                <a href="#" class="btn btn_yellow__bordered" data-toggle="modal" data-target="#clickModal">КУПИТЬ В 1 КЛИК</a>
-                <a href="#" class="btn btn_yellow">ОФОРМИТЬ ЗАКАЗ</a>-->
-            <!--</div>-->
         </div>
     </div>
     <!-- /basket -->

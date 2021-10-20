@@ -220,7 +220,7 @@ use Bitrix\Main\Page\Asset;
                     <li>
                         <a href="#">
                             <img src="<?=SITE_TEMPLATE_PATH?>/img/favorite_icon.png" alt="">
-                            <span class="amount">99</span>
+                            <!--<span class="amount">99</span>-->
                         </a>
                     </li>
 
