@@ -241,7 +241,7 @@ use Bitrix\Main\Page\Asset;
                         "bitrix:sale.basket.basket.line",
                         "",
                         [
-							"PATH_TO_BASKET" => SITE_DIR."personal/cart/",
+							"PATH_TO_BASKET" => SITE_DIR."basket/",
 							"PATH_TO_ORDER" => SITE_DIR."personal/order/make/",
 							"SHOW_NUM_PRODUCTS" => "Y",
 							"SHOW_TOTAL_PRICE" => "N",
@@ -283,7 +283,8 @@ use Bitrix\Main\Page\Asset;
     if (
         !CSite::InDir(SITE_DIR.'index.php') &&
         !CSite::InDir(SITE_DIR.'catalog/') &&
-        !CSite::InDir(SITE_DIR.'~index.php')
+        !CSite::InDir(SITE_DIR.'~index.php') &&
+        !CSite::InDir(SITE_DIR.'auth/')
     ):
     ?>
         <div class="section section_page_title">
